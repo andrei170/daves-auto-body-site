@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dave's Auto Body Inc | Green Bay Collision Repair | Since 1983</title>
+<meta name="description" content="Family-owned collision and auto body shop at 1748 W Paulson Rd, Green Bay, WI. Founded 1983 by Dave Wierer, daughter-led since 2018. Collision repair, paint, towing, and used-vehicle sales. Call (920) 498-2133.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1c3347;
+    --navy-deep: #111f2d;
+    --steel: #3d5c73;
+    --sky: #5b8aa6;
+    --sky-light: #a9c6d6;
+    --cream: #f5f0e8;
+    --bone: #ece5d5;
+    --warm: #c9a878;
+    --warm-deep: #a8895c;
+    --rust: #b05a36;
+    --rust-deep: #8f4428;
+    --ink: #1a1714;
+    --ink-soft: #4a4540;
+    --line: #ddd5c2;
+    --white: #ffffff;
+    --serif: 'Playfair Display', Georgia, serif;
+    --sans: 'Inter', system-ui, sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    color: var(--ink);
+    background: var(--cream);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; height: auto; display: block; }
+  ul { list-style: none; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 28px; }
+
+  /* ===================== HEADER ===================== */
+  .site-header {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(245, 240, 232, 0.96);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line);
+    padding: 16px 0;
+    transition: padding 0.3s, box-shadow 0.3s;
+  }
+  .site-header.scrolled {
+    padding: 10px 0;
+    box-shadow: 0 4px 24px rgba(28, 51, 71, 0.10);
+  }
+  .nav {
+    display: flex; align-items: center; justify-content: space-between; gap: 24px;
+  }
+  .brand {
+    font-family: var(--serif);
+    font-size: 21px; font-weight: 700; color: var(--navy);
+    line-height: 1.1; letter-spacing: -0.01em;
+  }
+  .brand small {
+    display: block; font-family: var(--sans);
+    font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--warm-deep); font-weight: 600; margin-top: 3px;
+  }
+  .nav-links {
+    display: flex; gap: 28px; font-size: 14px; font-weight: 500;
+  }
+  .nav-links a { color: var(--navy); transition: color 0.2s; }
+  .nav-links a:hover { color: var(--rust); }
+  .btn {
+    display: inline-block; padding: 12px 26px;
+    background: var(--rust); color: var(--white);
+    font-size: 12px; font-weight: 700; letter-spacing: 0.12em;
+    text-transform: uppercase; border-radius: 2px;
+    border: 1px solid var(--rust);
+    transition: background 0.25s, border-color 0.25s, transform 0.2s;
+    cursor: pointer;
+  }
+  .btn:hover {
+    background: var(--rust-deep); border-color: var(--rust-deep);
+    transform: translateY(-1px);
+  }
+  .btn-outline {
+    background: transparent; color: var(--navy); border-color: var(--navy);
+  }
+  .btn-outline:hover { background: var(--navy); color: var(--cream); }
+  .btn-light {
+    background: var(--cream); color: var(--rust); border-color: var(--cream);
+  }
+  .btn-light:hover { background: var(--white); color: var(--rust-deep); border-color: var(--white); }
+  @media (max-width: 900px) { .nav-links { display: none; } }
+
+  /* ===================== HERO ===================== */
+  .hero {
+    min-height: 100vh;
+    background: linear-gradient(150deg, var(--navy) 0%, var(--navy-deep) 100%);
+    color: var(--cream);
+    display: flex; align-items: center;
+    position: relative; overflow: hidden;
+    padding: 80px 0 100px;
+  }
+  .hero::before {
+    content: ''; position: absolute; top: -15%; right: -8%;
+    width: 700px; height: 700px;
+    background: radial-gradient(circle, rgba(201, 168, 120, 0.18), transparent 60%);
+    filter: blur(80px); pointer-events: none;
+  }
+  .hero::after {
+    content: ''; position: absolute; bottom: -20%; left: -12%;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(91, 138, 166, 0.24), transparent 65%);
+    filter: blur(70px); pointer-events: none;
+  }
+  .hero-inner {
+    display: grid; grid-template-columns: 1.3fr 1fr; gap: 80px; align-items: center;
+    position: relative; z-index: 2; width: 100%;
+  }
+  .hero-eyebrow {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--warm); margin-bottom: 28px;
+  }
+  .hero h1 {
+    font-family: var(--serif); font-weight: 500;
+    font-size: clamp(38px, 5vw, 64px); line-height: 1.06;
+    margin-bottom: 28px; letter-spacing: -0.015em;
+  }
+  .hero h1 em { color: var(--warm); font-style: italic; font-weight: 700; }
+  .hero-sub {
+    font-size: 18px; color: rgba(245, 240, 232, 0.82);
+    margin-bottom: 38px; max-width: 580px; line-height: 1.65;
+  }
+  .hero-actions { display: flex; gap: 18px; flex-wrap: wrap; align-items: center; }
+  .hero-phone {
+    font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
+    color: rgba(245, 240, 232, 0.7);
+  }
+  .hero-phone strong {
+    display: block; font-family: var(--serif); font-size: 20px;
+    color: var(--cream); font-weight: 500; letter-spacing: 0; margin-top: 2px;
+  }
+  .trust-chips {
+    display: flex; flex-wrap: wrap; gap: 10px; margin-top: 38px;
+  }
+  .chip {
+    font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+    color: rgba(245, 240, 232, 0.9); padding: 7px 14px;
+    border: 1px solid rgba(201, 168, 120, 0.36); border-radius: 2px;
+    background: rgba(201, 168, 120, 0.08);
+  }
+
+  /* Hero card */
+  .hero-card {
+    background: var(--cream); border-radius: 4px;
+    padding: 40px 36px; color: var(--ink);
+    box-shadow: 0 32px 72px rgba(0,0,0,0.30);
+    border-top: 4px solid var(--warm);
+  }
+  .hero-card-label {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--rust); margin-bottom: 18px;
+  }
+  .hero-card h3 {
+    font-family: var(--serif); font-size: 26px; font-weight: 700;
+    color: var(--navy); line-height: 1.2; margin-bottom: 16px;
+  }
+  .hero-card-divider { width: 52px; height: 2px; background: var(--warm); margin: 20px 0 24px; }
+  .stat-row {
+    display: flex; gap: 16px; padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .stat-row:last-child { border-bottom: none; }
+  .stat-row .num {
+    font-family: var(--serif); font-size: 36px; font-weight: 700;
+    color: var(--rust); line-height: 1; min-width: 64px;
+  }
+  .stat-row .lbl { font-size: 13px; color: var(--ink-soft); line-height: 1.45; padding-top: 4px; }
+  .stat-row .lbl strong { color: var(--navy); display: block; font-size: 14px; margin-bottom: 2px; }
+
+  @media (max-width: 960px) {
+    .hero-inner { grid-template-columns: 1fr; gap: 52px; }
+    .hero { min-height: auto; padding: 100px 0 80px; }
+  }
+
+  /* ===================== TRUST BAND ===================== */
+  .trust-band {
+    background: var(--white); padding: 48px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .trust-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px;
+    text-align: center;
+  }
+  .trust-item .big {
+    font-family: var(--serif); font-size: 44px; font-weight: 700;
+    color: var(--navy); line-height: 1; display: block;
+  }
+  .trust-item .big em { color: var(--rust); font-style: normal; }
+  .trust-item .lbl {
+    font-size: 11px; letter-spacing: 0.17em; text-transform: uppercase;
+    color: var(--ink-soft); margin-top: 10px; font-weight: 600;
+  }
+  @media (max-width: 760px) { .trust-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; } }
+
+  /* ===================== SECTIONS ===================== */
+  section { padding: 96px 0; }
+  .section-eyebrow {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--rust); margin-bottom: 16px;
+  }
+  .section-title {
+    font-family: var(--serif); font-weight: 500;
+    font-size: clamp(32px, 4.2vw, 50px); line-height: 1.1;
+    color: var(--navy); margin-bottom: 18px; letter-spacing: -0.015em;
+  }
+  .section-title em { color: var(--rust); font-style: italic; font-weight: 700; }
+  .section-sub { font-size: 18px; color: var(--ink-soft); line-height: 1.65; max-width: 720px; }
+  .section-header { margin-bottom: 60px; }
+  .section-header.center { text-align: center; }
+  .section-header.center .section-sub { margin: 0 auto; }
+
+  /* ===================== HERITAGE ===================== */
+  .heritage { background: var(--bone); }
+  .heritage-grid {
+    display: grid; grid-template-columns: 1fr 1.35fr; gap: 72px; align-items: center;
+  }
+  .heritage-visual {
+    aspect-ratio: 4/5; border-radius: 4px; overflow: hidden;
+    background: linear-gradient(150deg, var(--steel) 0%, var(--navy-deep) 100%);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center; padding: 48px 36px; color: var(--cream);
+    box-shadow: 0 28px 64px rgba(28, 51, 71, 0.24);
+  }
+  .heritage-visual .yr-label {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--warm); margin-bottom: 14px;
+  }
+  .heritage-visual .yr {
+    font-family: var(--serif); font-size: 80px; font-style: italic;
+    font-weight: 700; line-height: 1; color: var(--cream); margin-bottom: 20px;
+  }
+  .heritage-visual .yr-quote {
+    font-family: var(--serif); font-size: 19px; font-style: italic;
+    color: rgba(245, 240, 232, 0.88); line-height: 1.5;
+  }
+  .heritage-content h2 {
+    font-family: var(--serif); font-weight: 500;
+    font-size: clamp(30px, 3.8vw, 46px); line-height: 1.1;
+    color: var(--navy); margin-bottom: 22px; letter-spacing: -0.01em;
+  }
+  .heritage-content h2 em { color: var(--rust); font-style: italic; font-weight: 700; }
+  .heritage-content p { font-size: 17px; color: var(--ink-soft); margin-bottom: 18px; line-height: 1.7; }
+  .pull-quote {
+    font-family: var(--serif); font-style: italic;
+    font-size: 22px; color: var(--navy); line-height: 1.45;
+    padding: 24px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+    margin: 28px 0;
+  }
+  @media (max-width: 960px) { .heritage-grid { grid-template-columns: 1fr; gap: 44px; } }
+
+  /* ===================== SUCCESSION ===================== */
+  .succession { background: var(--navy); color: var(--cream); position: relative; overflow: hidden; }
+  .succession::before {
+    content: ''; position: absolute; top: -25%; right: -10%;
+    width: 650px; height: 650px;
+    background: radial-gradient(circle, rgba(201, 168, 120, 0.18), transparent 60%);
+    filter: blur(80px); pointer-events: none;
+  }
+  .succession .section-eyebrow { color: var(--warm); }
+  .succession-grid {
+    display: grid; grid-template-columns: 1fr 1.15fr; gap: 72px; align-items: center;
+    position: relative; z-index: 2;
+  }
+  .succession-visual {
+    aspect-ratio: 1/1; border-radius: 4px; overflow: hidden;
+    background: linear-gradient(155deg, var(--rust) 0%, var(--navy-deep) 100%);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center; padding: 48px 40px;
+    box-shadow: 0 32px 70px rgba(0,0,0,0.36);
+  }
+  .succession-visual .vis-label {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--warm); margin-bottom: 18px;
+  }
+  .succession-visual .vis-headline {
+    font-family: var(--serif); font-size: 32px; font-style: italic; font-weight: 700;
+    color: var(--cream); line-height: 1.2; margin-bottom: 20px;
+  }
+  .succession-visual .vis-sub {
+    font-family: var(--serif); font-size: 17px; font-style: italic;
+    color: rgba(245, 240, 232, 0.86); line-height: 1.5;
+  }
+  .succession-content h2 {
+    font-family: var(--serif); font-weight: 500;
+    font-size: clamp(30px, 3.8vw, 46px); line-height: 1.1;
+    color: var(--cream); margin-bottom: 22px;
+  }
+  .succession-content h2 em { color: var(--warm); font-style: italic; font-weight: 700; }
+  .succession-content p { font-size: 17px; color: rgba(245, 240, 232, 0.82); margin-bottom: 18px; line-height: 1.7; }
+  .timeline-list { margin-top: 8px; }
+  .timeline-list li {
+    font-size: 15px; color: rgba(245, 240, 232, 0.88);
+    padding: 10px 0 10px 28px; position: relative;
+    border-bottom: 1px solid rgba(201, 168, 120, 0.15);
+  }
+  .timeline-list li:last-child { border-bottom: none; }
+  .timeline-list li::before {
+    content: ''; position: absolute; left: 0; top: 16px;
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--warm);
+  }
+  .timeline-list strong { color: var(--cream); }
+  @media (max-width: 960px) { .succession-grid { grid-template-columns: 1fr; gap: 44px; } }
+
+  /* ===================== SERVICES ===================== */
+  .services { background: var(--cream); }
+  .services-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px;
+  }
+  .service-card {
+    background: var(--white); border: 1px solid var(--line);
+    border-radius: 4px; padding: 32px 28px;
+    position: relative; overflow: hidden;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+  }
+  .service-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: var(--warm); transform: scaleX(0); transform-origin: left;
+    transition: transform 0.3s;
+  }
+  .service-card:hover {
+    transform: translateY(-5px); border-color: var(--warm);
+    box-shadow: 0 20px 48px rgba(28, 51, 71, 0.10);
+  }
+  .service-card:hover::before { transform: scaleX(1); }
+  .service-card.primary { border-color: var(--warm); }
+  .service-card.primary::before { transform: scaleX(1); background: var(--rust); }
+  .service-icon {
+    width: 48px; height: 48px; margin-bottom: 20px;
+    color: var(--rust);
+  }
+  .service-tag {
+    font-size: 10px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--rust); margin-bottom: 12px;
+  }
+  .service-card h3 {
+    font-family: var(--serif); font-size: 24px; font-weight: 700;
+    color: var(--navy); margin-bottom: 14px; line-height: 1.2;
+  }
+  .service-card p { font-size: 15px; color: var(--ink-soft); margin-bottom: 20px; line-height: 1.65; }
+  .service-detail { font-size: 13px; color: var(--steel); line-height: 1.5; font-weight: 500; }
+  @media (max-width: 1020px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 680px) { .services-grid { grid-template-columns: 1fr; } }
+
+  /* ===================== PROCESS ===================== */
+  .process { background: var(--bone); }
+  .process-steps {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+  }
+  .process-step {
+    background: var(--white); border: 1px solid var(--line);
+    border-radius: 4px; padding: 32px 26px; position: relative;
+  }
+  .step-number {
+    font-family: var(--serif); font-size: 56px; font-weight: 700;
+    color: var(--warm); line-height: 1; margin-bottom: 16px;
+  }
+  .process-step h4 {
+    font-family: var(--serif); font-size: 21px; font-weight: 700;
+    color: var(--navy); margin-bottom: 10px; line-height: 1.2;
+  }
+  .process-step p { font-size: 14px; color: var(--ink-soft); line-height: 1.65; }
+  @media (max-width: 900px) { .process-steps { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 540px) { .process-steps { grid-template-columns: 1fr; } }
+
+  /* ===================== CREW ===================== */
+  .crew { background: var(--white); }
+  .crew-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
+  }
+  .crew-card {
+    border: 1px solid var(--line); border-radius: 4px; overflow: hidden;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+  }
+  .crew-card:hover { transform: translateY(-4px); border-color: var(--warm); box-shadow: 0 16px 40px rgba(28, 51, 71, 0.10); }
+  .crew-banner {
+    aspect-ratio: 4/3;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center; padding: 28px 20px;
+  }
+  .crew-banner.c1 { background: linear-gradient(155deg, var(--warm), var(--navy-deep)); }
+  .crew-banner.c2 { background: linear-gradient(155deg, var(--sky), var(--navy)); }
+  .crew-banner.c3 { background: linear-gradient(155deg, var(--rust), var(--navy-deep)); }
+  .crew-banner.c4 { background: linear-gradient(155deg, var(--sky-light), var(--steel)); }
+  .crew-banner .tenure-label {
+    font-size: 10px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--cream); opacity: 0.85; margin-bottom: 8px;
+  }
+  .crew-banner .tenure-years {
+    font-family: var(--serif); font-size: 58px; font-weight: 700;
+    color: var(--white); line-height: 1;
+  }
+  .crew-banner .tenure-unit {
+    font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+    color: rgba(255,255,255,0.82); font-weight: 600; margin-top: 6px;
+  }
+  .crew-body { padding: 20px 22px 26px; }
+  .crew-role {
+    font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--rust); margin-bottom: 8px;
+  }
+  .crew-body h3 {
+    font-family: var(--serif); font-size: 18px; font-weight: 700;
+    color: var(--navy); margin-bottom: 8px; line-height: 1.25;
+  }
+  .crew-body p { font-size: 13px; color: var(--ink-soft); line-height: 1.6; }
+  .crew-total {
+    margin-top: 44px; text-align: center;
+    background: var(--bone); border: 1px solid var(--line); border-radius: 4px;
+    border-top: 4px solid var(--warm); padding: 34px 28px;
+    max-width: 640px; margin-left: auto; margin-right: auto;
+  }
+  .crew-total .big {
+    font-family: var(--serif); font-size: 72px; font-weight: 700;
+    color: var(--rust); line-height: 1; display: block;
+  }
+  .crew-total .total-lbl {
+    font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--navy); margin-top: 10px; font-weight: 700;
+  }
+  .crew-total p { font-size: 14px; color: var(--ink-soft); margin-top: 14px; line-height: 1.6; }
+  @media (max-width: 900px) { .crew-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 520px) { .crew-grid { grid-template-columns: 1fr; max-width: 380px; margin: 0 auto; } }
+
+  /* ===================== INSURANCE ===================== */
+  .insurance { background: var(--cream); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .insurance-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
+  }
+  .insurance-content h2 {
+    font-family: var(--serif); font-weight: 500;
+    font-size: clamp(30px, 3.8vw, 44px); line-height: 1.12;
+    color: var(--navy); margin-bottom: 22px;
+  }
+  .insurance-content h2 em { color: var(--rust); font-style: italic; font-weight: 700; }
+  .insurance-content p { font-size: 17px; color: var(--ink-soft); margin-bottom: 16px; line-height: 1.7; }
+  .check-list { margin-top: 24px; }
+  .check-list li {
+    font-size: 15px; color: var(--ink-soft); padding: 11px 0 11px 30px;
+    position: relative; border-bottom: 1px solid var(--line); line-height: 1.6;
+  }
+  .check-list li:last-child { border-bottom: none; }
+  .check-list li::before {
+    content: '';
+    position: absolute; left: 0; top: 14px;
+    width: 16px; height: 16px; border-radius: 50%;
+    background: var(--rust);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .check-list li::after {
+    content: '';
+    position: absolute; left: 5px; top: 18px;
+    width: 6px; height: 4px;
+    border-left: 2px solid var(--white); border-bottom: 2px solid var(--white);
+    transform: rotate(-45deg);
+  }
+  .check-list strong { color: var(--navy); }
+  .insurance-card {
+    background: var(--white); border: 1px solid var(--line); border-radius: 4px;
+    border-top: 4px solid var(--warm); padding: 38px 34px;
+  }
+  .insurance-card .card-tag {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--rust); margin-bottom: 16px;
+  }
+  .insurance-card h3 {
+    font-family: var(--serif); font-size: 26px; font-weight: 700;
+    color: var(--navy); margin-bottom: 14px; line-height: 1.2;
+  }
+  .insurance-card .divider { width: 52px; height: 2px; background: var(--warm); margin: 18px 0 22px; }
+  .insurance-card p { font-size: 15px; color: var(--ink-soft); line-height: 1.7; }
+  @media (max-width: 880px) { .insurance-grid { grid-template-columns: 1fr; gap: 40px; } }
+
+  /* ===================== AREAS ===================== */
+  .areas { background: var(--bone); }
+  .areas-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px;
+    max-width: 920px; margin: 0 auto;
+  }
+  .area-pill {
+    background: var(--white); border: 1px solid var(--line);
+    border-radius: 2px; padding: 18px 16px; text-align: center;
+    transition: all 0.25s;
+  }
+  .area-pill:hover { border-color: var(--warm); transform: translateY(-2px); box-shadow: 0 8px 22px rgba(28, 51, 71, 0.08); }
+  .area-pill .city-name {
+    font-family: var(--serif); font-size: 18px; font-weight: 700;
+    color: var(--navy); line-height: 1.2;
+  }
+  .area-pill .dist {
+    font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--ink-soft); margin-top: 4px; font-weight: 600;
+  }
+  .areas-note {
+    text-align: center; margin-top: 36px; font-size: 14px;
+    color: var(--ink-soft); font-style: italic;
+  }
+  @media (max-width: 860px) { .areas-grid { grid-template-columns: repeat(2, 1fr); } }
+
+  /* ===================== REVIEWS ===================== */
+  .reviews { background: var(--white); }
+  .reviews-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  }
+  .review-card {
+    background: var(--cream); border: 1px solid var(--line); border-radius: 4px;
+    padding: 30px 26px;
+  }
+  .review-stars { display: flex; gap: 4px; margin-bottom: 14px; }
+  .review-stars svg { width: 18px; height: 18px; fill: var(--warm); }
+  .review-card blockquote {
+    font-family: var(--serif); font-style: italic; font-size: 17px;
+    color: var(--navy); line-height: 1.55; margin-bottom: 16px;
+  }
+  .review-attr { font-size: 13px; font-weight: 600; color: var(--ink-soft); }
+  @media (max-width: 900px) { .reviews-grid { grid-template-columns: 1fr; max-width: 560px; margin: 0 auto; } }
+
+  /* ===================== CONTACT ===================== */
+  .contact { background: var(--bone); }
+  .contact-grid {
+    display: grid; grid-template-columns: 1fr 1.1fr; gap: 72px; align-items: start;
+  }
+  .contact-info h2 {
+    font-family: var(--serif); font-weight: 500;
+    font-size: clamp(30px, 3.6vw, 44px); line-height: 1.1;
+    color: var(--navy); margin-bottom: 20px;
+  }
+  .contact-info h2 em { color: var(--rust); font-style: italic; font-weight: 700; }
+  .contact-info p { font-size: 17px; color: var(--ink-soft); margin-bottom: 28px; line-height: 1.7; }
+  .contact-details { display: flex; flex-direction: column; gap: 0; margin-bottom: 28px; }
+  .contact-row {
+    display: flex; align-items: flex-start; gap: 16px; padding: 16px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .contact-row:first-child { border-top: 1px solid var(--line); }
+  .contact-row svg { width: 20px; height: 20px; color: var(--rust); flex-shrink: 0; margin-top: 2px; }
+  .contact-row .contact-label {
+    font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--rust); margin-bottom: 4px;
+  }
+  .contact-row .contact-value { font-size: 15px; color: var(--navy); font-weight: 500; line-height: 1.4; }
+  .contact-row .contact-value a { color: var(--navy); text-decoration: underline; text-underline-offset: 3px; }
+  .contact-row .contact-value a:hover { color: var(--rust); }
+
+  /* Form */
+  .estimate-form {
+    background: var(--white); border: 1px solid var(--line); border-radius: 4px;
+    border-top: 4px solid var(--rust); padding: 40px 36px;
+  }
+  .estimate-form h3 {
+    font-family: var(--serif); font-size: 28px; font-weight: 700;
+    color: var(--navy); margin-bottom: 8px;
+  }
+  .estimate-form .form-sub { font-size: 15px; color: var(--ink-soft); margin-bottom: 28px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+  .form-row.full { grid-template-columns: 1fr; }
+  label { display: block; font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--navy); margin-bottom: 6px; }
+  input, select, textarea {
+    width: 100%; padding: 12px 14px; background: var(--cream);
+    border: 1px solid var(--line); border-radius: 2px;
+    font-family: var(--sans); font-size: 15px; color: var(--ink);
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  input:focus, select:focus, textarea:focus {
+    outline: none; border-color: var(--rust);
+    box-shadow: 0 0 0 3px rgba(176, 90, 54, 0.12);
+  }
+  textarea { resize: vertical; min-height: 100px; }
+  select { appearance: none; -webkit-appearance: none; cursor: pointer; }
+  .form-note { font-size: 12px; color: var(--ink-soft); margin-top: 12px; line-height: 1.6; }
+  @media (max-width: 880px) { .contact-grid { grid-template-columns: 1fr; gap: 44px; } }
+  @media (max-width: 580px) { .form-row { grid-template-columns: 1fr; } }
+
+  /* ===================== FINAL CTA ===================== */
+  .final-cta {
+    background: linear-gradient(135deg, var(--rust) 0%, var(--rust-deep) 100%);
+    color: var(--cream); text-align: center; padding: 110px 0;
+    position: relative; overflow: hidden;
+  }
+  .final-cta::before {
+    content: ''; position: absolute; top: -35%; left: 50%; transform: translateX(-50%);
+    width: 800px; height: 800px;
+    background: radial-gradient(circle, rgba(201, 168, 120, 0.26), transparent 55%);
+    filter: blur(80px); pointer-events: none;
+  }
+  .final-cta .container { position: relative; z-index: 2; }
+  .final-cta h2 {
+    font-family: var(--serif); font-weight: 500;
+    font-size: clamp(36px, 5vw, 56px); line-height: 1.08;
+    margin-bottom: 22px; letter-spacing: -0.015em;
+  }
+  .final-cta p {
+    font-size: 19px; color: rgba(245, 240, 232, 0.90);
+    max-width: 640px; margin: 0 auto 46px; line-height: 1.65;
+  }
+  .final-actions { display: flex; gap: 22px; justify-content: center; flex-wrap: wrap; align-items: center; }
+  .phone-pair { display: flex; flex-direction: column; align-items: flex-start; }
+  .phone-pair .ph-label {
+    font-size: 10px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase;
+    color: rgba(245, 240, 232, 0.70); margin-bottom: 2px;
+  }
+  .phone-pair a {
+    font-family: var(--serif); font-size: 22px; font-weight: 700;
+    color: var(--cream); text-decoration: underline; text-underline-offset: 4px;
+    text-decoration-color: rgba(245, 240, 232, 0.4);
+  }
+  .phone-pair a:hover { text-decoration-color: var(--cream); }
+
+  /* ===================== FOOTER ===================== */
+  footer {
+    background: var(--navy-deep); color: rgba(245, 240, 232, 0.68);
+    padding: 72px 0 36px;
+  }
+  .foot-grid {
+    display: grid; grid-template-columns: 1.7fr 1fr 1fr 1fr; gap: 52px;
+    margin-bottom: 48px;
+  }
+  .foot-brand {
+    font-family: var(--serif); font-size: 22px; font-weight: 700;
+    color: var(--cream); margin-bottom: 14px; line-height: 1.2;
+  }
+  .foot-brand small {
+    display: block; font-family: var(--sans);
+    font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--warm); font-weight: 600; margin-top: 4px;
+  }
+  .foot-desc { font-size: 14px; line-height: 1.7; }
+  footer h5 {
+    color: var(--warm); font-size: 11px; letter-spacing: 0.22em;
+    text-transform: uppercase; margin-bottom: 16px; font-weight: 700;
+  }
+  footer ul { font-size: 14px; display: flex; flex-direction: column; gap: 8px; }
+  footer li a:hover { color: var(--warm); }
+  .foot-bottom {
+    border-top: 1px solid rgba(201, 168, 120, 0.18); padding-top: 26px;
+    font-size: 12px; letter-spacing: 0.04em;
+  }
+  .foot-bottom-row {
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+    line-height: 1.7;
+  }
+  .signoff a { color: var(--warm); text-decoration: underline; text-underline-offset: 3px; }
+  .signoff a:hover { color: var(--cream); }
+  @media (max-width: 960px) { .foot-grid { grid-template-columns: 1fr 1fr; gap: 36px; } }
+  @media (max-width: 560px) { .foot-grid { grid-template-columns: 1fr; } }
+
+  /* ===================== MOTION ===================== */
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal {
+      opacity: 0; transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible { opacity: 1; transform: none; }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header class="site-header" id="site-header">
+  <div class="container nav">
+    <a href="#" class="brand">
+      Dave's Auto Body Inc
+      <small>Green Bay, WI &middot; Since 1983</small>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#heritage">Our Story</a>
+      <a href="#services">Services</a>
+      <a href="#process">How It Works</a>
+      <a href="#crew">The Crew</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="btn">Free Estimate</a>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" aria-label="Hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-eyebrow">1748 W Paulson Road, Green Bay, WI &middot; Founded 1983</div>
+        <h1>Green Bay's family collision shop, <em>daughter-led since 2018.</em></h1>
+        <p class="hero-sub">Dave Wierer opened this shop on West Paulson Road in 1983. His daughter Jessica Senn has owned and run it since 2018. The crew on the floor carries roughly 89 combined years of body-shop experience. Collision repair, paint, towing, and used-vehicle sales, one mile from Austin Straubel airport.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn">Request a Free Estimate</a>
+          <div class="hero-phone">
+            Call us
+            <strong><a href="tel:9204982133" style="color:inherit;">(920) 498-2133</a></strong>
+          </div>
+        </div>
+        <div class="trust-chips">
+          <span class="chip">Founded 1983</span>
+          <span class="chip">Daughter-Led Since 2018</span>
+          <span class="chip">~89 Combined Years of Crew Tenure</span>
+          <span class="chip">Near GRB Airport</span>
+        </div>
+      </div>
+      <div class="hero-card reveal">
+        <div class="hero-card-label">A Family Collision Shop</div>
+        <h3>Two generations. One address. 42 years on Paulson Road.</h3>
+        <div class="hero-card-divider"></div>
+        <div class="stat-row">
+          <span class="num">42</span>
+          <div class="lbl"><strong>Years at the same address</strong>Founded 1983 by Dave Wierer. Same building, same family ever since.</div>
+        </div>
+        <div class="stat-row">
+          <span class="num">2nd</span>
+          <div class="lbl"><strong>Generation, daughter-led</strong>Jessica Senn took over as owner and president in 2018 when her father Dave handed off the shop.</div>
+        </div>
+        <div class="stat-row">
+          <span class="num">~89</span>
+          <div class="lbl"><strong>Combined years of crew tenure</strong>Four technicians at 28, 26, 23, and 12 years on the bay, all under one roof.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TRUST BAND ===================== -->
+<div class="trust-band">
+  <div class="container">
+    <div class="trust-grid">
+      <div class="trust-item reveal">
+        <span class="big">1983</span>
+        <div class="lbl">Year Founded</div>
+      </div>
+      <div class="trust-item reveal reveal-delay-1">
+        <span class="big">42<em>+</em></span>
+        <div class="lbl">Years on Paulson Road</div>
+      </div>
+      <div class="trust-item reveal reveal-delay-2">
+        <span class="big">2<em>nd</em></span>
+        <div class="lbl">Generation, Daughter-Led</div>
+      </div>
+      <div class="trust-item reveal reveal-delay-3">
+        <span class="big">~89</span>
+        <div class="lbl">Combined Crew Years</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== HERITAGE ===================== -->
+<section id="heritage" class="heritage">
+  <div class="container">
+    <div class="heritage-grid">
+      <div class="heritage-visual reveal">
+        <div class="yr-label">Founded</div>
+        <div class="yr">1983</div>
+        <p class="yr-quote">"Honesty is the best way to gain the trust of customers."</p>
+      </div>
+      <div class="heritage-content reveal reveal-delay-1">
+        <div class="section-eyebrow">Our Story</div>
+        <h2>Dave Wierer opened the doors in 1983. <em>His daughter Jessica runs it today.</em></h2>
+        <p>Dave Wierer founded Dave's Auto Body Inc at 1748 West Paulson Road in Green Bay in 1983. He worked that bay for 35 years. In 2018, his daughter Jessica Senn took over as owner and president, and the shop kept its name, its address, and the same crew on the floor.</p>
+        <p>Forty-two years later, the shop is still on Paulson Road. The phone numbers still route to the same building. Most of the technicians on the floor have been there longer than most national chains have had a Green Bay location. A customer who had a fender repaired here in 2008 can bring a teenager's first car back in 2026 and recognize the names on the work order.</p>
+        <div class="pull-quote">"The same address since 1983. The same family. A daughter-led second generation, and a crew with roughly 89 combined years on the bay."</div>
+        <p>The shop runs collision repair, refinishing, towing, and used-vehicle sales out of one Paulson Road building. The tagline on the wall: "honesty is the best way to gain the trust of customers."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SUCCESSION ===================== -->
+<section id="succession" class="succession">
+  <div class="container">
+    <div class="succession-grid">
+      <div class="succession-visual reveal">
+        <div class="vis-label">Daughter-Led Since 2018</div>
+        <div class="vis-headline">Dave to Jessica. Father to daughter. 1983 to today.</div>
+        <p class="vis-sub">A second-generation family handover the collision category almost never produces.</p>
+      </div>
+      <div class="succession-content reveal reveal-delay-1">
+        <div class="section-eyebrow">The Succession Story</div>
+        <h2>A family handover most shops <em>never manage to make.</em></h2>
+        <p>Most collision shops in the metro are either regional chains, MSO rollups, or one-owner operations that close when the founder retires. Dave's Auto Body is the rare third path. Dave Wierer founded it in 1983. His daughter Jessica Senn took over as owner and president in 2018. The shop did not change hands to a chain. It moved from generation one to generation two inside the same family.</p>
+        <ul class="timeline-list">
+          <li><strong>1983:</strong> Dave Wierer founds Dave's Auto Body Inc at 1748 W Paulson Rd, Green Bay</li>
+          <li><strong>35 years:</strong> Dave runs the shop from founding through 2018</li>
+          <li><strong>2018:</strong> Jessica Senn, Dave's daughter, takes over as owner and president</li>
+          <li><strong>Today:</strong> 2nd-generation, daughter-led, same original Paulson Road address</li>
+          <li><strong>The crew:</strong> Technicians at 28, 26, 23, and 12 years on the bay, roughly 89 combined years</li>
+          <li><strong>The standard:</strong> "Honesty is the best way to gain the trust of customers"</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SERVICES ===================== -->
+<section id="services" class="services">
+  <div class="container">
+    <div class="section-header center reveal">
+      <div class="section-eyebrow">What We Do</div>
+      <h2 class="section-title">Collision, paint, towing, and used vehicles. <em>All from one Paulson Road bay.</em></h2>
+      <p class="section-sub">Dave's Auto Body runs every service out of the same address on West Paulson Road it has occupied since 1983.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card primary reveal">
+        <div class="service-tag">Core Service</div>
+        <svg class="service-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <rect x="4" y="20" width="40" height="16" rx="3" stroke="currentColor" stroke-width="2.5"/>
+          <path d="M8 20L14 10h20l6 10" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+          <circle cx="14" cy="36" r="4" stroke="currentColor" stroke-width="2.5"/>
+          <circle cx="34" cy="36" r="4" stroke="currentColor" stroke-width="2.5"/>
+          <path d="M4 28h2M42 28h2" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        <h3>Collision Repair</h3>
+        <p>Full-service collision repair for everything from a parking-lot crunch to a significant impact. The shop has handled Green Bay collision work since 1983, with the same technicians who know every quirk of Wisconsin winters and Green Bay roads.</p>
+        <div class="service-detail">Structural, body panels, bumpers, fenders, doors</div>
+      </div>
+
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-tag">Paint</div>
+        <svg class="service-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <path d="M16 8h16M12 16h24M8 24h32M12 32h24M16 40h16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="36" cy="12" r="6" stroke="currentColor" stroke-width="2.5"/>
+          <path d="M36 18v10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        <h3>Paint and Refinishing</h3>
+        <p>Color-matched refinishing and full repaints. The shop's paint technician carries 23 years of refinish work on Green Bay vehicles, matching every manufacturer color, including custom and two-tone finishes.</p>
+        <div class="service-detail">Color match, full respray, spot repair, clearcoat</div>
+      </div>
+
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-tag">Body Repair</div>
+        <svg class="service-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <rect x="6" y="14" width="36" height="22" rx="3" stroke="currentColor" stroke-width="2.5"/>
+          <path d="M14 14V10M34 14V10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M20 26l4 4 8-8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h3>Frame Straightening</h3>
+        <p>Frame and structural straightening after moderate to severe impact. The shop uses frame-straightening equipment to bring a vehicle back to manufacturer tolerances before any body or paint work begins.</p>
+        <div class="service-detail">Structural alignment, unibody, full-frame vehicles</div>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-tag">Paintless</div>
+        <svg class="service-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="2.5"/>
+          <path d="M24 16v8l6 4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="24" cy="24" r="3" fill="currentColor"/>
+        </svg>
+        <h3>Paintless Dent Repair</h3>
+        <p>Minor dents and dings without repainting. Hail damage, door dings, and small panel impressions can often be addressed through paintless dent repair, keeping the factory finish intact and the cost down.</p>
+        <div class="service-detail">Hail damage, door dings, minor panel dents</div>
+      </div>
+
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-tag">Towing</div>
+        <svg class="service-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <rect x="4" y="22" width="26" height="14" rx="3" stroke="currentColor" stroke-width="2.5"/>
+          <path d="M30 22h6l6 6v6h-6" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+          <circle cx="12" cy="36" r="4" stroke="currentColor" stroke-width="2.5"/>
+          <circle cx="36" cy="36" r="4" stroke="currentColor" stroke-width="2.5"/>
+          <path d="M30 29h-4V18l8 4" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+        </svg>
+        <h3>Towing</h3>
+        <p>Towing dispatch for vehicles that are not drivable after an accident or breakdown in the Green Bay metro. The tow line routes to dispatch directly. If the vehicle is not drivable, this is the right number to call first.</p>
+        <div class="service-detail">Tow dispatch line: <a href="tel:9203960772" style="color:var(--rust);">(920) 396-0772</a></div>
+      </div>
+
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-tag">Used Vehicles</div>
+        <svg class="service-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <path d="M8 32V20l6-8h20l6 8v12" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+          <circle cx="16" cy="34" r="4" stroke="currentColor" stroke-width="2.5"/>
+          <circle cx="32" cy="34" r="4" stroke="currentColor" stroke-width="2.5"/>
+          <path d="M4 32h40M14 20h20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        <h3>Used Vehicle Sales</h3>
+        <p>Used vehicles available off the Packerland Drive lot, near Austin Straubel airport. The shop has sold used vehicles alongside its collision and body work for years. Call the shop line to ask about current inventory.</p>
+        <div class="service-detail">Inventory varies, near GRB airport on Packerland Drive</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROCESS ===================== -->
+<section id="process" class="process">
+  <div class="container">
+    <div class="section-header center reveal">
+      <div class="section-eyebrow">How It Works</div>
+      <h2 class="section-title">Bringing your vehicle in <em>is straightforward.</em></h2>
+      <p class="section-sub">Four steps from the first call to picking up a repaired vehicle. The shop walks you through each one.</p>
+    </div>
+
+    <div class="process-steps">
+      <div class="process-step reveal">
+        <div class="step-number">1</div>
+        <h4>Call the right line</h4>
+        <p>Shop line at <a href="tel:9204982133" style="color:var(--rust);">(920) 498-2133</a> for collision, paint, body work, and used-vehicle questions. Tow line at <a href="tel:9203960772" style="color:var(--rust);">(920) 396-0772</a> for dispatch if the vehicle is not drivable.</p>
+      </div>
+      <div class="process-step reveal reveal-delay-1">
+        <div class="step-number">2</div>
+        <h4>Insurance or out-of-pocket</h4>
+        <p>Let the shop know whether you are going through an insurance carrier or paying out of pocket. The estimate process, timeline, and paperwork differ for each. The shop routes accordingly and explains both paths clearly.</p>
+      </div>
+      <div class="process-step reveal reveal-delay-2">
+        <div class="step-number">3</div>
+        <h4>An honest estimate</h4>
+        <p>The shop writes the estimate, walks you through the work, and explains what is happening at each stage. "Honesty is the best way to gain the trust of customers" is on the wall for a reason. No surprises on the final invoice.</p>
+      </div>
+      <div class="process-step reveal reveal-delay-3">
+        <div class="step-number">4</div>
+        <h4>Pick up your vehicle</h4>
+        <p>When the work is complete, the shop calls you. A technician walks through what was done before you drive off. If anything is not right, say so. The goal is a repair you are satisfied with, not just a closed work order.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CREW ===================== -->
+<section id="crew" class="crew">
+  <div class="container">
+    <div class="section-header center reveal">
+      <div class="section-eyebrow">The Crew on the Bay</div>
+      <h2 class="section-title">Roughly 89 combined years of body-shop tenure. <em>Under one roof.</em></h2>
+      <p class="section-sub">Four technicians at 28, 26, 23, and 12 years respectively. That kind of continuity is something no regional chain or MSO can manufacture.</p>
+    </div>
+
+    <div class="crew-grid">
+      <div class="crew-card reveal">
+        <div class="crew-banner c1">
+          <div class="tenure-label">Senior Technician</div>
+          <div class="tenure-years">28</div>
+          <div class="tenure-unit">Years on the bay</div>
+        </div>
+        <div class="crew-body">
+          <div class="crew-role">Lead Body Technician</div>
+          <h3>Twenty-eight years on this bay.</h3>
+          <p>The senior body technician has been with the shop since before most of Green Bay's current chain locations existed. A full career spent on West Paulson Road.</p>
+        </div>
+      </div>
+
+      <div class="crew-card reveal reveal-delay-1">
+        <div class="crew-banner c2">
+          <div class="tenure-label">Body Technician</div>
+          <div class="tenure-years">26</div>
+          <div class="tenure-unit">Years on the bay</div>
+        </div>
+        <div class="crew-body">
+          <div class="crew-role">Body and Frame</div>
+          <h3>Twenty-six years of collision work.</h3>
+          <p>More than two decades of body and frame repair under the same roof, on Green Bay roads and Green Bay vehicles.</p>
+        </div>
+      </div>
+
+      <div class="crew-card reveal reveal-delay-2">
+        <div class="crew-banner c3">
+          <div class="tenure-label">Refinish Technician</div>
+          <div class="tenure-years">23</div>
+          <div class="tenure-unit">Years on the bay</div>
+        </div>
+        <div class="crew-body">
+          <div class="crew-role">Paint and Refinish</div>
+          <h3>Twenty-three years of paint work.</h3>
+          <p>Over two decades of color-match refinishing from the same painter, in the same shop. A level of consistency no rotation-based chain can offer.</p>
+        </div>
+      </div>
+
+      <div class="crew-card reveal reveal-delay-3">
+        <div class="crew-banner c4">
+          <div class="tenure-label">Body Technician</div>
+          <div class="tenure-years">12</div>
+          <div class="tenure-unit">Years on the bay</div>
+        </div>
+        <div class="crew-body">
+          <div class="crew-role">Body Repair</div>
+          <h3>Twelve years, apprentice to journeyman.</h3>
+          <p>A full career arc built inside the same shop, under the same family ownership. Learned the trade on these bays and stayed.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="crew-total reveal">
+      <span class="big">~89</span>
+      <div class="total-lbl">Combined Years of Body-Shop Tenure</div>
+      <p>Per the shop's own heritage record. Four technicians, one address, one family. That is what 42 years of consistent ownership produces.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== INSURANCE ===================== -->
+<section id="insurance" class="insurance">
+  <div class="container">
+    <div class="insurance-grid">
+      <div class="insurance-content reveal">
+        <div class="section-eyebrow">Insurance and Direct Pay</div>
+        <h2>Working with insurance <em>or paying directly: here is what to know.</em></h2>
+        <p>Dave's Auto Body works with drivers coming in on insurance claims and with drivers paying out of pocket. The process differs, and the shop is straightforward about both paths from the first call.</p>
+        <p>If you have an insurance claim, bring the claim number and your adjuster's contact information. The shop works through the repair process with the carrier. If you are paying directly, the estimate is written at the shop and the cost is explained before any work begins.</p>
+        <ul class="check-list">
+          <li><strong>Insurance claims:</strong> Bring your claim number. The shop coordinates with the adjuster on your behalf.</li>
+          <li><strong>Direct pay:</strong> A written estimate before work starts. No surprise additions without your approval.</li>
+          <li><strong>Towing:</strong> If the vehicle is not drivable, call <a href="tel:9203960772" style="color:var(--rust);">(920) 396-0772</a> first. The tow line routes directly to dispatch.</li>
+          <li><strong>Timeline:</strong> The shop gives a repair timeline at the estimate stage. It tells you if that changes.</li>
+          <li><strong>The standard:</strong> "Honesty is the best way to gain the trust of customers." That applies to the invoice as much as the repair.</li>
+        </ul>
+      </div>
+      <div class="insurance-card reveal reveal-delay-1">
+        <div class="card-tag">What to Bring</div>
+        <h3>Before you come in, have these ready.</h3>
+        <div class="divider"></div>
+        <p><strong>Insurance claim:</strong> Your claim number, adjuster name and phone, insurance card, and vehicle registration. The shop takes it from there.</p>
+        <br>
+        <p><strong>Out-of-pocket repair:</strong> The vehicle and a description of what happened. The shop writes the estimate on site. No paperwork required in advance.</p>
+        <br>
+        <p><strong>Towing first:</strong> If the vehicle is not drivable, do not bring it, call it in. The tow line at (920) 396-0772 dispatches from the same Paulson Road location.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== AREAS ===================== -->
+<section id="areas" class="areas">
+  <div class="container">
+    <div class="section-header center reveal">
+      <div class="section-eyebrow">Service Area</div>
+      <h2 class="section-title">On Paulson Road in Green Bay, <em>one mile from Austin Straubel airport.</em></h2>
+      <p class="section-sub">Dave's Auto Body is at 1748 West Paulson Road off Packerland Drive, roughly one to two miles from GRB. Customers come in from across the west side of the metro and the broader Brown County corridor.</p>
+    </div>
+
+    <div class="areas-grid">
+      <div class="area-pill reveal"><div class="city-name">Green Bay</div><div class="dist">Our home</div></div>
+      <div class="area-pill reveal reveal-delay-1"><div class="city-name">GRB Airport</div><div class="dist">1-2 miles</div></div>
+      <div class="area-pill reveal reveal-delay-2"><div class="city-name">Ashwaubenon</div><div class="dist">~4 miles</div></div>
+      <div class="area-pill reveal reveal-delay-3"><div class="city-name">Howard</div><div class="dist">~5 miles</div></div>
+      <div class="area-pill reveal"><div class="city-name">Suamico</div><div class="dist">~8 miles</div></div>
+      <div class="area-pill reveal reveal-delay-1"><div class="city-name">Hobart</div><div class="dist">~6 miles</div></div>
+      <div class="area-pill reveal reveal-delay-2"><div class="city-name">De Pere</div><div class="dist">~7 miles</div></div>
+      <div class="area-pill reveal reveal-delay-3"><div class="city-name">Pulaski</div><div class="dist">~14 miles</div></div>
+    </div>
+
+    <p class="areas-note reveal">Not on this list? If you are looking for a family-owned collision shop in the west-Green-Bay corridor, call the shop line at (920) 498-2133.</p>
+  </div>
+</section>
+
+<!-- ===================== REVIEWS ===================== -->
+<section id="reviews" class="reviews">
+  <div class="container">
+    <div class="section-header center reveal">
+      <div class="section-eyebrow">What Customers Say</div>
+      <h2 class="section-title">42 years of Green Bay drivers <em>bringing their vehicles back.</em></h2>
+      <p class="section-sub">The real proof of a family collision shop is the customers who return. Dave's Auto Body has been earning that for 42 years.</p>
+    </div>
+
+    <div class="reviews-grid">
+      <div class="review-card reveal">
+        <div class="review-stars" aria-label="5 stars">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.7 5.5L19 7.6l-4.5 4.4 1.1 6.2L10 15.4l-5.6 2.8 1.1-6.2L1 7.6l6.3-.9z"/></svg>
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.7 5.5L19 7.6l-4.5 4.4 1.1 6.2L10 15.4l-5.6 2.8 1.1-6.2L1 7.6l6.3-.9z"/></svg>
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.7 5.5L19 7.6l-4.5 4.4 1.1 6.2L10 15.4l-5.6 2.8 1.1-6.2L1 7.6l6.3-.9z"/></svg>
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.7 5.5L19 7.6l-4.5 4.4 1.1 6.2L10 15.4l-5.6 2.8 1.1-6.2L1 7.6l6.3-.9z"/></svg>
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.7 5.5L19 7.6l-4.5 4.4 1.1 6.2L10 15.4l-5.6 2.8 1.1-6.2L1 7.6l6.3-.9z"/></svg>
+        </div>
+        <blockquote>"Been coming here for years. The work is good and they tell you exactly what is going on with your vehicle. Family shop, and you can tell."</blockquote>
+        <div class="review-attr">Google review, Green Bay customer</div>
+      </div>
+
+      <div class="review-card reveal reveal-delay-1">
+        <div class="review-stars" aria-label="5 stars">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.7 5.5L19 7.6l-4.5 4.4 1.1 6.2L10 15.4l-5.6 2.8 1.1-6.2L1 7.6l6.3-.9z"/></svg>
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.7 5.5L19 7.6l-4.5 4.4 1.1 6.2L10 15.4l-5.6 2.8 1.1-6.2L1 7.6l6.3-.9z"/></svg>
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.7 5.5L19 7.6l-4.5 4.4 1.1 6.2L10 15.4l-5.6 2.8 1.1-6.2L1 7.6l6.3-.9z"/></svg>
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.7 5.5L19 7.6l-4.5 4.4 1.1 6.2L10 15.4l-5.6 2.8 1.1-6.2L1 7.6l6.3-.9z"/></svg>
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.7 5.5L19 7.6l-4.5 4.4 1.1 6.2L10 15.4l-5.6 2.8 1.1-6.2L1 7.6l6.3-.9z"/></svg>
+        </div>
+        <blockquote>"Brought my car in after a rear-end accident. They handled the insurance claim, kept me updated, and the color match was perfect. Would not go anywhere else."</blockquote>
+        <div class="review-attr">Google review, Ashwaubenon customer</div>
+      </div>
+
+      <div class="review-card reveal reveal-delay-2">
+        <div class="review-stars" aria-label="5 stars">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.7 5.5L19 7.6l-4.5 4.4 1.1 6.2L10 15.4l-5.6 2.8 1.1-6.2L1 7.6l6.3-.9z"/></svg>
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.7 5.5L19 7.6l-4.5 4.4 1.1 6.2L10 15.4l-5.6 2.8 1.1-6.2L1 7.6l6.3-.9z"/></svg>
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.7 5.5L19 7.6l-4.5 4.4 1.1 6.2L10 15.4l-5.6 2.8 1.1-6.2L1 7.6l6.3-.9z"/></svg>
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.7 5.5L19 7.6l-4.5 4.4 1.1 6.2L10 15.4l-5.6 2.8 1.1-6.2L1 7.6l6.3-.9z"/></svg>
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.7 5.5L19 7.6l-4.5 4.4 1.1 6.2L10 15.4l-5.6 2.8 1.1-6.2L1 7.6l6.3-.9z"/></svg>
+        </div>
+        <blockquote>"My dad brought his trucks here for years. Now I bring mine. The guys in the shop have been there forever. That says everything about how the place is run."</blockquote>
+        <div class="review-attr">Google review, Howard customer</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section id="contact" class="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="section-eyebrow">Get in Touch</div>
+        <h2>Ready to bring your vehicle in? <em>Here is how to reach us.</em></h2>
+        <p>The shop line handles collision, paint, body work, and used-vehicle questions. The tow line is for dispatch when the vehicle cannot be driven. Both route to 1748 West Paulson Road in Green Bay.</p>
+
+        <div class="contact-details">
+          <div class="contact-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+            <div>
+              <div class="contact-label">Address</div>
+              <div class="contact-value">1748 W Paulson Rd, Green Bay, WI 54313<br>Off Packerland Drive, near GRB Airport</div>
+            </div>
+          </div>
+          <div class="contact-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.5 2 2 0 0 1 3.59 1.3h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.29 6.29l.82-.82a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            <div>
+              <div class="contact-label">Shop Line</div>
+              <div class="contact-value"><a href="tel:9204982133">(920) 498-2133</a><br>Collision, paint, body work, used vehicles</div>
+            </div>
+          </div>
+          <div class="contact-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="1" y="3" width="15" height="13" rx="2"/><path d="m16 8 6 4v5h-6z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
+            </svg>
+            <div>
+              <div class="contact-label">Tow Dispatch</div>
+              <div class="contact-value"><a href="tel:9203960772">(920) 396-0772</a><br>Vehicle not drivable? Call this line first.</div>
+            </div>
+          </div>
+        </div>
+
+        <a href="tel:9204982133" class="btn" style="margin-top:8px;">Call (920) 498-2133</a>
+      </div>
+
+      <div class="estimate-form reveal reveal-delay-1">
+        <h3>Request a Free Estimate</h3>
+        <p class="form-sub">Fill this out and the shop will get back to you. Or call directly at (920) 498-2133.</p>
+
+        <form action="#" method="POST" onsubmit="return false;">
+          <div class="form-row">
+            <div>
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="fname" placeholder="Jessica" autocomplete="given-name">
+            </div>
+            <div>
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lname" placeholder="Senn" autocomplete="family-name">
+            </div>
+          </div>
+          <div class="form-row">
+            <div>
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" placeholder="(920) 555-0100" autocomplete="tel">
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@email.com" autocomplete="email">
+            </div>
+          </div>
+          <div class="form-row">
+            <div>
+              <label for="year">Vehicle Year</label>
+              <input type="text" id="year" name="year" placeholder="2019">
+            </div>
+            <div>
+              <label for="make">Make and Model</label>
+              <input type="text" id="make" name="make" placeholder="Chevrolet Silverado">
+            </div>
+          </div>
+          <div class="form-row">
+            <div>
+              <label for="claim-type">Insurance or Out of Pocket?</label>
+              <select id="claim-type" name="claim-type">
+                <option value="">Select one</option>
+                <option value="insurance">Going through insurance</option>
+                <option value="out-of-pocket">Paying out of pocket</option>
+                <option value="not-sure">Not sure yet</option>
+              </select>
+            </div>
+            <div>
+              <label for="service">Service Needed</label>
+              <select id="service" name="service">
+                <option value="">Select service</option>
+                <option value="collision">Collision repair</option>
+                <option value="paint">Paint and refinishing</option>
+                <option value="dent">Paintless dent repair</option>
+                <option value="frame">Frame straightening</option>
+                <option value="tow">Towing</option>
+                <option value="used">Used vehicle inquiry</option>
+                <option value="other">Other / not sure</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row full">
+            <div>
+              <label for="notes">Describe the Damage</label>
+              <textarea id="notes" name="notes" placeholder="Brief description of what happened and what you can see on the vehicle..."></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn" style="width:100%; font-size:13px; padding:14px 0;">Send Estimate Request</button>
+          <p class="form-note">No commitment required. The shop will call or email to confirm receipt and schedule an in-person look at the vehicle.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FINAL CTA ===================== -->
+<section class="final-cta">
+  <div class="container">
+    <h2>A Green Bay family collision shop since 1983.</h2>
+    <p>Dave's Auto Body Inc has worked the same address on West Paulson Road for 42 years, family-owned the entire time, and daughter-led since 2018. Collision, paint, towing, and used-vehicle sales near Austin Straubel airport.</p>
+    <div class="final-actions">
+      <a href="#contact" class="btn btn-light">Request a Free Estimate</a>
+      <div class="phone-pair">
+        <span class="ph-label">Shop Line</span>
+        <a href="tel:9204982133">(920) 498-2133</a>
+      </div>
+      <div class="phone-pair">
+        <span class="ph-label">Tow Dispatch</span>
+        <a href="tel:9203960772">(920) 396-0772</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          Dave's Auto Body Inc
+          <small>Green Bay, WI &middot; Since 1983</small>
+        </div>
+        <p class="foot-desc">Family-owned auto body and collision shop at 1748 West Paulson Road in Green Bay, Wisconsin. Founded in 1983 by Dave Wierer, run by his daughter Jessica Senn as owner and president since 2018. Collision repair, paint, towing, and used-vehicle sales off Packerland Drive, near the Austin Straubel airport.</p>
+      </div>
+      <div>
+        <h5>Visit the Shop</h5>
+        <ul>
+          <li>1748 W Paulson Rd</li>
+          <li>Green Bay, WI 54313</li>
+          <li style="margin-top:6px;"><a href="tel:9204982133">(920) 498-2133</a></li>
+          <li>Shop and body work inquiries</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Tow Dispatch</h5>
+        <ul>
+          <li><a href="tel:9203960772">(920) 396-0772</a></li>
+          <li>Vehicle not drivable?</li>
+          <li>Call this line first.</li>
+          <li style="margin-top:6px;">Off Packerland Drive</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#services">Collision Repair</a></li>
+          <li><a href="#services">Paint and Refinishing</a></li>
+          <li><a href="#services">Frame Straightening</a></li>
+          <li><a href="#services">Paintless Dent Repair</a></li>
+          <li><a href="#services">Towing</a></li>
+          <li><a href="#services">Used Vehicle Sales</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div class="foot-bottom-row">
+        <div>&copy; 2026 Dave's Auto Body Inc. Family-founded, daughter-led collision shop in Green Bay, WI. Est. 1983.</div>
+        <div class="signoff">Demo site prepared by <a href="https://andrei170.github.io/ag1/#services">AG Consulting</a></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== SCRIPTS ===================== -->
+<script>
+  // Sticky header condense on scroll
+  (function () {
+    var header = document.getElementById('site-header');
+    if (!header) return;
+    function onScroll() {
+      if (window.scrollY > 60) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+  }());
+
+  // Scroll reveal (respects prefers-reduced-motion via CSS)
+  (function () {
+    var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reducedMotion) return;
+    var els = document.querySelectorAll('.reveal');
+    if (!els.length) return;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    els.forEach(function (el) { io.observe(el); });
+  }());
+</script>
+
+</body>
+</html>
