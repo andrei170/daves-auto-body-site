@@ -4,6 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dave's Auto Body Inc &middot; Green Bay Collision Repair &middot; Since 1983</title>
+  <meta property="og:title" content="Dave's Auto Body Inc &middot; Green Bay Collision Repair &middot; Since 1983">
+  <meta property="og:description" content="Family-owned collision and auto body shop at 1748 W Paulson Rd, Green Bay, WI. Founded 1983 by Dave Wierer, daughter-led since 2018. Collision repair, paint, frame straightening, towing, and used vehicles. Call (920) 498-2133.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://andrei170.github.io/daves-auto-body-site/">
+  <meta property="og:image" content="https://stauditcentralusaa01prod.blob.core.windows.net/files/Accounts/1/Locations/f6ada406-3e7e-4ab0-8ce9-c665cafebe11/SliderImage/8e4a3f9f-7f65-4a42-a603-9bfbfdce1b2a.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://stauditcentralusaa01prod.blob.core.windows.net/files/Accounts/1/Locations/f6ada406-3e7e-4ab0-8ce9-c665cafebe11/SliderImage/8e4a3f9f-7f65-4a42-a603-9bfbfdce1b2a.jpg">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%230f172a'/><text x='32' y='44' font-size='38' font-family='Georgia,serif' fill='%23ffffff' text-anchor='middle'>D</text></svg>">
+
 <meta name="description" content="Family-owned collision and auto body shop at 1748 W Paulson Rd, Green Bay, WI. Founded 1983 by Dave Wierer, daughter-led since 2018. Collision repair, paint, frame straightening, towing, and used vehicles. Call (920) 498-2133.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -69,7 +78,7 @@
   .eyebrow.gold::before { background: var(--warm); }
 
   /* ============================================================
-     STICKY CLICK-TO-CALL BAR (persistent top strip)
+     STICKY CLICK-TO-CALL BAR
   ============================================================ */
   .cta-strip {
     position: fixed; top: 0; left: 0; right: 0; z-index: 200;
@@ -162,27 +171,33 @@
   @media (min-width: 921px) { .nav-call .short { display: none; } }
 
   /* ============================================================
-     HERO
+     HERO -- 100vh, real photo, dark scrim, Ken Burns
   ============================================================ */
   .hero {
-    min-height: 100vh; min-height: 100svh;
+    height: 100vh; height: 100svh; min-height: 600px;
     display: flex; align-items: center;
     padding: 140px 0 100px;
     position: relative; overflow: hidden;
     color: var(--cream);
   }
-  /* Real photo from live site as hero background */
+  /* Ken Burns on the real photo */
   .hero-bg {
     position: absolute; inset: 0; z-index: 0; pointer-events: none;
     background-image: url('https://stauditcentralusaa01prod.blob.core.windows.net/files/Accounts/1/Locations/f6ada406-3e7e-4ab0-8ce9-c665cafebe11/SliderImage/8e4a3f9f-7f65-4a42-a603-9bfbfdce1b2a.jpg');
     background-size: cover; background-position: center 40%;
-    opacity: 0.22;
+    animation: kenburnshero 22s ease-in-out infinite alternate;
+    will-change: transform;
   }
+  @keyframes kenburnshero {
+    0%   { transform: scale(1.00) translate(0%, 0%); }
+    100% { transform: scale(1.10) translate(-2%, -1.5%); }
+  }
+  /* Dark scrim layers */
   .hero-bg::after {
     content: ''; position: absolute; inset: 0;
     background:
-      linear-gradient(100deg, rgba(13,15,18,0.95) 0%, rgba(13,15,18,0.72) 50%, rgba(13,15,18,0.38) 100%),
-      linear-gradient(0deg, rgba(13,15,18,0.90) 0%, transparent 40%);
+      linear-gradient(100deg, rgba(13,15,18,0.92) 0%, rgba(13,15,18,0.68) 48%, rgba(13,15,18,0.35) 100%),
+      linear-gradient(0deg, rgba(13,15,18,0.88) 0%, transparent 38%);
   }
   .hero-grid {
     position: absolute; inset: 0; z-index: 0; pointer-events: none; opacity: 0.4;
@@ -200,7 +215,6 @@
     mask-image: linear-gradient(to bottom, transparent, #000 30%, #000 70%, transparent);
     opacity: 0.65;
   }
-  /* Giant ghost year watermark */
   .hero-watermark {
     position: absolute; right: -2%; bottom: -10%; z-index: 0; pointer-events: none;
     font-family: var(--display); font-size: 30vw; line-height: 0.7;
@@ -295,7 +309,58 @@
   .section-sub.on-dark { color: rgba(240,236,228,0.80); }
 
   /* ============================================================
-     WORK GALLERY STRIP
+     CINEMATIC FULL-BLEED BAND (~65vh)
+  ============================================================ */
+  .cinematic-band {
+    width: 100vw;
+    position: relative;
+    left: 50%; right: 50%;
+    margin-left: -50vw; margin-right: -50vw;
+    height: clamp(380px, 65vh, 780px);
+    overflow: hidden;
+    display: flex; align-items: flex-end;
+  }
+  .cinematic-band img {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%; object-fit: cover;
+    object-position: center 35%;
+    filter: saturate(0.80) brightness(0.72);
+    animation: kenburnsband 28s ease-in-out infinite alternate;
+    will-change: transform;
+  }
+  @keyframes kenburnsband {
+    0%   { transform: scale(1.00) translate(0%, 0%); }
+    100% { transform: scale(1.08) translate(1.5%, 0.8%); }
+  }
+  .cinematic-band::after {
+    content: ''; position: absolute; inset: 0;
+    background:
+      linear-gradient(0deg, rgba(13,15,18,0.88) 0%, rgba(13,15,18,0.50) 40%, rgba(13,15,18,0.18) 100%);
+    pointer-events: none;
+  }
+  .cinematic-caption {
+    position: relative; z-index: 2;
+    padding: 44px 48px;
+    max-width: 860px;
+  }
+  .cinematic-caption .eyeline {
+    font-family: var(--cond); font-size: 11px; font-weight: 600;
+    letter-spacing: 0.30em; text-transform: uppercase; color: var(--warm);
+    margin-bottom: 14px; display: block;
+  }
+  .cinematic-caption blockquote {
+    font-family: var(--display); font-weight: 400;
+    font-size: clamp(28px, 4.5vw, 58px); line-height: 0.95;
+    color: var(--cream); text-transform: uppercase;
+    letter-spacing: 0.01em;
+  }
+  .cinematic-caption blockquote span { color: var(--warm); }
+  @media (max-width: 640px) {
+    .cinematic-caption { padding: 28px 24px; }
+  }
+
+  /* ============================================================
+     WORK GALLERY -- enlarged grid + lightbox
   ============================================================ */
   .gallery-strip {
     background: var(--dark);
@@ -304,40 +369,119 @@
   }
   .gallery-rail {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 0;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 4px;
   }
   .gallery-cell {
     position: relative; overflow: hidden;
-    aspect-ratio: 4/3;
+    cursor: pointer;
   }
   .gallery-cell img {
     width: 100%; height: 100%; object-fit: cover; display: block;
-    transition: transform 0.5s cubic-bezier(0.16,1,0.3,1), filter 0.4s;
+    transition: transform 0.55s cubic-bezier(0.16,1,0.3,1), filter 0.4s;
     filter: saturate(0.85) brightness(0.88);
   }
-  .gallery-cell:hover img { transform: scale(1.07); filter: saturate(1.05) brightness(0.96); }
+  .gallery-cell:hover img { transform: scale(1.06); filter: saturate(1.05) brightness(0.96); }
   .gallery-cell::after {
     content: ''; position: absolute; inset: 0;
-    background: linear-gradient(0deg, rgba(13,15,18,0.72) 0%, transparent 45%);
+    background: linear-gradient(0deg, rgba(13,15,18,0.70) 0%, transparent 42%);
     pointer-events: none;
   }
-  /* First cell is wider and taller -- hero image of the shop exterior */
+  /* Zoom icon overlay on hover */
+  .gallery-cell::before {
+    content: '';
+    position: absolute; inset: 0; z-index: 2;
+    background: rgba(13,15,18,0.0);
+    transition: background 0.3s;
+    pointer-events: none;
+  }
+  .gallery-cell:hover::before { background: rgba(13,15,18,0.18); }
+  .gallery-zoom-icon {
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%) scale(0.6);
+    width: 52px; height: 52px; z-index: 3;
+    background: rgba(13,15,18,0.72); border: 1.5px solid rgba(197,160,90,0.5);
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    opacity: 0; transition: opacity 0.3s, transform 0.3s;
+    pointer-events: none;
+  }
+  .gallery-cell:hover .gallery-zoom-icon { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  .gallery-zoom-icon svg { width: 22px; height: 22px; stroke: var(--warm); fill: none; stroke-width: 2; stroke-linecap: round; }
+  /* First cell -- large main */
   .gallery-cell.main {
-    grid-column: span 2;
-    grid-row: span 1;
-    aspect-ratio: unset;
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    aspect-ratio: 3/2.4;
   }
-  .gallery-cell.main img { height: 100%; min-height: 280px; }
+  .gallery-cell.sub {
+    aspect-ratio: 4/3;
+  }
   @media (max-width: 860px) {
-    .gallery-rail { grid-template-columns: repeat(2, 1fr); }
-    .gallery-cell.main { grid-column: span 2; }
-    .gallery-cell:nth-child(n+5) { display: none; }
+    .gallery-rail { grid-template-columns: 1fr 1fr; grid-template-rows: auto auto auto; }
+    .gallery-cell.main { grid-column: 1 / span 2; grid-row: 1; aspect-ratio: 16/8; }
+    .gallery-cell.sub { aspect-ratio: 4/3; }
   }
-  @media (max-width: 500px) {
+  @media (max-width: 520px) {
     .gallery-rail { grid-template-columns: 1fr; }
-    .gallery-cell.main { grid-column: 1; }
-    .gallery-cell:nth-child(n+4) { display: none; }
+    .gallery-cell.main { grid-column: 1; aspect-ratio: 16/9; }
+    .gallery-cell.sub { aspect-ratio: 4/3; }
+    .gallery-cell.sub:nth-child(n+4) { display: none; }
+  }
+
+  /* ============================================================
+     LIGHTBOX
+  ============================================================ */
+  .lightbox {
+    position: fixed; inset: 0; z-index: 1000;
+    background: rgba(7,8,10,0.96);
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+  }
+  .lightbox.open { opacity: 1; visibility: visible; }
+  .lb-img-wrap {
+    position: relative; max-width: min(92vw, 1280px); max-height: 90vh;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .lb-img-wrap img {
+    max-width: 100%; max-height: 88vh;
+    object-fit: contain; border-radius: 4px;
+    box-shadow: 0 32px 80px rgba(0,0,0,0.8);
+    transition: opacity 0.25s;
+  }
+  .lb-close {
+    position: fixed; top: 24px; right: 28px;
+    width: 48px; height: 48px; border-radius: 50%;
+    background: rgba(13,15,18,0.85); border: 1.5px solid rgba(197,160,90,0.4);
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+    transition: background 0.2s, border-color 0.2s;
+    z-index: 1001;
+  }
+  .lb-close:hover { background: rgba(192,58,42,0.85); border-color: var(--red); }
+  .lb-close svg { width: 22px; height: 22px; stroke: var(--cream); fill: none; stroke-width: 2.2; stroke-linecap: round; }
+  .lb-arrow {
+    position: fixed; top: 50%; transform: translateY(-50%);
+    width: 52px; height: 52px; border-radius: 50%;
+    background: rgba(13,15,18,0.80); border: 1.5px solid rgba(197,160,90,0.35);
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+    transition: background 0.2s, border-color 0.2s, opacity 0.2s;
+    z-index: 1001;
+  }
+  .lb-arrow:hover { background: rgba(13,15,18,0.96); border-color: var(--warm); }
+  .lb-arrow.lb-prev { left: 20px; }
+  .lb-arrow.lb-next { right: 20px; }
+  .lb-arrow svg { width: 24px; height: 24px; stroke: var(--cream); fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+  .lb-caption {
+    position: fixed; bottom: 22px; left: 50%; transform: translateX(-50%);
+    font-family: var(--cond); font-size: 12px; letter-spacing: 0.18em;
+    text-transform: uppercase; color: rgba(240,236,228,0.55);
+    z-index: 1001; white-space: nowrap;
+  }
+  @media (max-width: 600px) {
+    .lb-arrow { width: 42px; height: 42px; }
+    .lb-arrow.lb-prev { left: 8px; }
+    .lb-arrow.lb-next { right: 8px; }
   }
 
   /* ============================================================
@@ -633,6 +777,7 @@
     * { animation: none !important; scroll-behavior: auto !important; }
     .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
     .scroll-hint .line { animation: none !important; }
+    .hero-bg, .cinematic-band img { animation: none !important; }
   }
 </style>
 </head>
@@ -686,7 +831,7 @@
 </nav>
 
 <!-- ============================================================
-     HERO
+     HERO -- 100vh, real photo + Ken Burns + dark scrim
 ============================================================ -->
 <section class="hero" id="top">
   <div class="hero-bg" role="img" aria-label="Dave's Auto Body shop exterior at 1748 W Paulson Road, Green Bay"></div>
@@ -743,42 +888,70 @@
 </div>
 
 <!-- ============================================================
-     GALLERY STRIP (real photos)
+     GALLERY -- enlarged 5-cell grid with lightbox
 ============================================================ -->
-<div class="gallery-strip" aria-label="Shop and work photos">
+<div class="gallery-strip" aria-label="Shop and work photos" id="gallery">
   <div class="gallery-rail">
-    <!-- Main: shop exterior photo -->
-    <div class="gallery-cell main">
+    <!-- Main cell (large) -->
+    <div class="gallery-cell main" data-lb="0" tabindex="0" role="button" aria-label="Open photo 1 in full view">
       <img
         src="https://stauditcentralusaa01prod.blob.core.windows.net/files/Accounts/1/Locations/f6ada406-3e7e-4ab0-8ce9-c665cafebe11/SliderImage/fcc3a2b8-1117-414a-b860-71cb7917c6db.jpg"
         alt="Dave's Auto Body shop, 1748 W Paulson Road, Green Bay"
         loading="lazy"
       >
-      <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(13,15,18,0.75) 0%,transparent 50%);pointer-events:none;"></div>
+      <div class="gallery-zoom-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="8" y1="11" x2="14" y2="11"/><line x1="11" y1="8" x2="11" y2="14"/></svg></div>
     </div>
-    <!-- Secondary shop/work images -->
-    <div class="gallery-cell">
+    <!-- Sub cells -->
+    <div class="gallery-cell sub" data-lb="1" tabindex="0" role="button" aria-label="Open photo 2 in full view">
       <img
         src="https://stauditcentralusaa01prod.blob.core.windows.net/files/Accounts/1/Locations/f6ada406-3e7e-4ab0-8ce9-c665cafebe11/SliderImage/baf6c18d-dbec-4ccb-b10a-2e4c8180ae35.jpg"
         alt="Body work in progress at Dave's Auto Body"
         loading="lazy"
       >
+      <div class="gallery-zoom-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="8" y1="11" x2="14" y2="11"/><line x1="11" y1="8" x2="11" y2="14"/></svg></div>
     </div>
-    <div class="gallery-cell">
+    <div class="gallery-cell sub" data-lb="2" tabindex="0" role="button" aria-label="Open photo 3 in full view">
       <img
         src="https://stauditcentralusaa01prod.blob.core.windows.net/files/Accounts/1/Locations/f6ada406-3e7e-4ab0-8ce9-c665cafebe11/SliderImage/5be1d011-85e2-4f64-a2c6-75a77584b9d8.jpg"
         alt="Collision repair at Dave's Auto Body Green Bay"
         loading="lazy"
       >
+      <div class="gallery-zoom-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="8" y1="11" x2="14" y2="11"/><line x1="11" y1="8" x2="11" y2="14"/></svg></div>
     </div>
-    <div class="gallery-cell">
+    <div class="gallery-cell sub" data-lb="3" tabindex="0" role="button" aria-label="Open photo 4 in full view">
       <img
         src="https://stauditcentralusaa01prod.blob.core.windows.net/files/Accounts/1/Locations/f6ada406-3e7e-4ab0-8ce9-c665cafebe11/SliderImage/42576962-384c-43cb-841d-003baf83c766.jpg"
         alt="Completed auto body work at Dave's Auto Body"
         loading="lazy"
       >
+      <div class="gallery-zoom-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="8" y1="11" x2="14" y2="11"/><line x1="11" y1="8" x2="11" y2="14"/></svg></div>
+    </div>
+    <div class="gallery-cell sub" data-lb="4" tabindex="0" role="button" aria-label="Open photo 5 in full view">
+      <img
+        src="https://stauditcentralusaa01prod.blob.core.windows.net/files/Accounts/1/Locations/f6ada406-3e7e-4ab0-8ce9-c665cafebe11/SliderImage/8e4a3f9f-7f65-4a42-a603-9bfbfdce1b2a.jpg"
+        alt="Dave's Auto Body exterior, West Paulson Road"
+        loading="lazy"
+      >
+      <div class="gallery-zoom-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="8" y1="11" x2="14" y2="11"/><line x1="11" y1="8" x2="11" y2="14"/></svg></div>
     </div>
   </div>
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <div class="lb-img-wrap">
+    <img src="" alt="" id="lbImg">
+  </div>
+  <button class="lb-close" id="lbClose" aria-label="Close photo viewer">
+    <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <button class="lb-arrow lb-prev" id="lbPrev" aria-label="Previous photo">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+  </button>
+  <button class="lb-arrow lb-next" id="lbNext" aria-label="Next photo">
+    <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+  </button>
+  <div class="lb-caption" id="lbCaption" aria-live="polite"></div>
 </div>
 
 <!-- ============================================================
@@ -854,6 +1027,21 @@
     </div>
   </div>
 </section>
+
+<!-- ============================================================
+     CINEMATIC FULL-BLEED PHOTO BAND
+============================================================ -->
+<div class="cinematic-band" aria-label="Shop at 1748 W Paulson Road, Green Bay">
+  <img
+    src="https://stauditcentralusaa01prod.blob.core.windows.net/files/Accounts/1/Locations/f6ada406-3e7e-4ab0-8ce9-c665cafebe11/SliderImage/baf6c18d-dbec-4ccb-b10a-2e4c8180ae35.jpg"
+    alt="Body work in progress at Dave's Auto Body, Green Bay"
+    loading="lazy"
+  >
+  <div class="cinematic-caption reveal">
+    <span class="eyeline">1748 W Paulson Rd &middot; Green Bay, WI &middot; Est. 1983</span>
+    <blockquote>Two generations. One address. <span>42 years on Paulson Road.</span></blockquote>
+  </div>
+</div>
 
 <!-- ============================================================
      STORY (Heritage)
@@ -1015,7 +1203,7 @@
       <div class="ins-card reveal d1">
         <div class="card-tag">What to Bring</div>
         <h3 style="font-family:var(--display);font-size:28px;color:var(--cream);margin-bottom:16px;text-transform:uppercase;">Before you come in.</h3>
-        <div class="ins-card .divider" style="width:52px;height:2px;background:var(--warm);margin:0 0 22px;"></div>
+        <div style="width:52px;height:2px;background:var(--warm);margin:0 0 22px;"></div>
         <p><strong style="color:var(--cream);">Insurance claim:</strong> Your claim number, adjuster name and phone, insurance card, and vehicle registration. The shop takes it from there.</p>
         <p><strong style="color:var(--cream);">Out-of-pocket repair:</strong> The vehicle and a description of what happened. The shop writes the estimate on site. No paperwork required in advance.</p>
         <p><strong style="color:var(--cream);">Towing first:</strong> If the vehicle is not drivable, call (920) 396-0772. Do not drive it in. The tow line dispatches from the same Paulson Road location.</p>
@@ -1254,7 +1442,6 @@
     } else {
       header.classList.remove('condensed');
     }
-    /* When user scrolls past 2x strip height, collapse strip offset */
     if (window.scrollY > stripH * 2) {
       header.classList.add('strip-gone');
     } else {
@@ -1291,6 +1478,73 @@
       var top = target.getBoundingClientRect().top + window.scrollY - offset;
       window.scrollTo({ top: top, behavior: reduce ? 'auto' : 'smooth' });
     });
+  });
+
+  /* ---- Gallery lightbox ---- */
+  var cells = document.querySelectorAll('.gallery-cell[data-lb]');
+  var lbImages = [];
+  cells.forEach(function (cell) {
+    var img = cell.querySelector('img');
+    if (img) lbImages.push({ src: img.src, alt: img.alt });
+  });
+
+  var lightbox = document.getElementById('lightbox');
+  var lbImg = document.getElementById('lbImg');
+  var lbCaption = document.getElementById('lbCaption');
+  var lbClose = document.getElementById('lbClose');
+  var lbPrev = document.getElementById('lbPrev');
+  var lbNext = document.getElementById('lbNext');
+  var currentLb = 0;
+
+  function openLb(idx) {
+    currentLb = (idx + lbImages.length) % lbImages.length;
+    lbImg.src = lbImages[currentLb].src;
+    lbImg.alt = lbImages[currentLb].alt;
+    lbCaption.textContent = (currentLb + 1) + ' / ' + lbImages.length;
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    lbClose.focus();
+  }
+
+  function closeLb() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function navLb(dir) {
+    currentLb = (currentLb + dir + lbImages.length) % lbImages.length;
+    lbImg.style.opacity = '0';
+    setTimeout(function () {
+      lbImg.src = lbImages[currentLb].src;
+      lbImg.alt = lbImages[currentLb].alt;
+      lbCaption.textContent = (currentLb + 1) + ' / ' + lbImages.length;
+      lbImg.style.opacity = '1';
+    }, 140);
+  }
+
+  cells.forEach(function (cell) {
+    var idx = parseInt(cell.getAttribute('data-lb'), 10);
+    cell.addEventListener('click', function () { openLb(idx); });
+    cell.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLb(idx); }
+    });
+  });
+
+  lbClose.addEventListener('click', closeLb);
+  lbPrev.addEventListener('click', function () { navLb(-1); });
+  lbNext.addEventListener('click', function () { navLb(1); });
+
+  /* Click outside image closes lightbox */
+  lightbox.addEventListener('click', function (e) {
+    if (e.target === lightbox) closeLb();
+  });
+
+  /* Keyboard: Escape = close, arrows = nav */
+  document.addEventListener('keydown', function (e) {
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLb();
+    if (e.key === 'ArrowLeft') navLb(-1);
+    if (e.key === 'ArrowRight') navLb(1);
   });
 
 }());
