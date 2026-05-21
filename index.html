@@ -3,1201 +3,1109 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dave's Auto Body Inc | Green Bay Collision Repair | Since 1983</title>
-<meta name="description" content="Family-owned collision and auto body shop at 1748 W Paulson Rd, Green Bay, WI. Founded 1983 by Dave Wierer, daughter-led since 2018. Collision repair, paint, towing, and used-vehicle sales. Call (920) 498-2133.">
+<title>Dave's Auto Body Inc &middot; Green Bay Collision Repair &middot; Since 1983</title>
+<meta name="description" content="Family-owned collision and auto body shop at 1748 W Paulson Rd, Green Bay, WI. Founded 1983 by Dave Wierer, daughter-led since 2018. Collision repair, paint, frame straightening, towing, and used vehicles. Call (920) 498-2133.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
   :root {
-    --navy: #1c3347;
-    --navy-deep: #111f2d;
-    --steel: #3d5c73;
-    --sky: #5b8aa6;
-    --sky-light: #a9c6d6;
-    --cream: #f5f0e8;
-    --bone: #ece5d5;
-    --warm: #c9a878;
-    --warm-deep: #a8895c;
-    --rust: #b05a36;
-    --rust-deep: #8f4428;
-    --ink: #1a1714;
-    --ink-soft: #4a4540;
-    --line: #ddd5c2;
-    --white: #ffffff;
-    --serif: 'Playfair Display', Georgia, serif;
-    --sans: 'Inter', system-ui, sans-serif;
+    --dark:      #0d0f12;
+    --dark-2:    #13161b;
+    --dark-3:    #1a1e26;
+    --dark-4:    #212630;
+    --slate:     #2a3040;
+    --steel:     #3d4a5c;
+    --cream:     #f0ece4;
+    --bone:      #e2ddd4;
+    --warm:      #c5a05a;
+    --warm-deep: #a07f3e;
+    --warm-lt:   #d9b870;
+    --red:       #c03a2a;
+    --red-deep:  #952d1f;
+    --red-bright:#d44434;
+    --ink:       #181614;
+    --ink-soft:  #4a4540;
+    --line:      #d0c8b8;
+    --white:     #ffffff;
+    --display:   'Anton', sans-serif;
+    --cond:      'Oswald', sans-serif;
+    --sans:      'Inter', system-ui, sans-serif;
+    --sh-card:   0 2px 4px rgba(0,0,0,0.06), 0 12px 28px rgba(0,0,0,0.10);
+    --sh-lift:   0 18px 44px rgba(0,0,0,0.22), 0 4px 12px rgba(192,58,42,0.14);
+    --sh-deep:   0 30px 70px rgba(0,0,0,0.55);
   }
-
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
   body {
     font-family: var(--sans);
     color: var(--ink);
-    background: var(--cream);
-    line-height: 1.65;
+    background: var(--dark);
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
   }
   a { color: inherit; text-decoration: none; }
   img { max-width: 100%; height: auto; display: block; }
-  ul { list-style: none; }
   .container { max-width: 1200px; margin: 0 auto; padding: 0 28px; }
 
-  /* ===================== HEADER ===================== */
-  .site-header {
-    position: sticky; top: 0; z-index: 100;
-    background: rgba(245, 240, 232, 0.96);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--line);
-    padding: 16px 0;
-    transition: padding 0.3s, box-shadow 0.3s;
-  }
-  .site-header.scrolled {
-    padding: 10px 0;
-    box-shadow: 0 4px 24px rgba(28, 51, 71, 0.10);
-  }
-  .nav {
-    display: flex; align-items: center; justify-content: space-between; gap: 24px;
-  }
-  .brand {
-    font-family: var(--serif);
-    font-size: 21px; font-weight: 700; color: var(--navy);
-    line-height: 1.1; letter-spacing: -0.01em;
-  }
-  .brand small {
-    display: block; font-family: var(--sans);
-    font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--warm-deep); font-weight: 600; margin-top: 3px;
-  }
-  .nav-links {
-    display: flex; gap: 28px; font-size: 14px; font-weight: 500;
-  }
-  .nav-links a { color: var(--navy); transition: color 0.2s; }
-  .nav-links a:hover { color: var(--rust); }
-  .btn {
-    display: inline-block; padding: 12px 26px;
-    background: var(--rust); color: var(--white);
-    font-size: 12px; font-weight: 700; letter-spacing: 0.12em;
-    text-transform: uppercase; border-radius: 2px;
-    border: 1px solid var(--rust);
-    transition: background 0.25s, border-color 0.25s, transform 0.2s;
-    cursor: pointer;
-  }
-  .btn:hover {
-    background: var(--rust-deep); border-color: var(--rust-deep);
-    transform: translateY(-1px);
-  }
-  .btn-outline {
-    background: transparent; color: var(--navy); border-color: var(--navy);
-  }
-  .btn-outline:hover { background: var(--navy); color: var(--cream); }
-  .btn-light {
-    background: var(--cream); color: var(--rust); border-color: var(--cream);
-  }
-  .btn-light:hover { background: var(--white); color: var(--rust-deep); border-color: var(--white); }
-  @media (max-width: 900px) { .nav-links { display: none; } }
+  /* Reveal animation */
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1); }
+  .reveal.in { opacity: 1; transform: none; }
+  .reveal.d1 { transition-delay: 0.08s; }
+  .reveal.d2 { transition-delay: 0.16s; }
+  .reveal.d3 { transition-delay: 0.24s; }
+  .reveal.d4 { transition-delay: 0.32s; }
 
-  /* ===================== HERO ===================== */
-  .hero {
-    min-height: 100vh;
-    background: linear-gradient(150deg, var(--navy) 0%, var(--navy-deep) 100%);
-    color: var(--cream);
-    display: flex; align-items: center;
-    position: relative; overflow: hidden;
-    padding: 80px 0 100px;
+  /* Eyebrow */
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 12px;
+    font-family: var(--cond); font-size: 13px; font-weight: 600;
+    letter-spacing: 0.34em; text-transform: uppercase; color: var(--red);
+    margin-bottom: 18px;
   }
-  .hero::before {
-    content: ''; position: absolute; top: -15%; right: -8%;
-    width: 700px; height: 700px;
-    background: radial-gradient(circle, rgba(201, 168, 120, 0.18), transparent 60%);
-    filter: blur(80px); pointer-events: none;
-  }
-  .hero::after {
-    content: ''; position: absolute; bottom: -20%; left: -12%;
-    width: 600px; height: 600px;
-    background: radial-gradient(circle, rgba(91, 138, 166, 0.24), transparent 65%);
-    filter: blur(70px); pointer-events: none;
-  }
-  .hero-inner {
-    display: grid; grid-template-columns: 1.3fr 1fr; gap: 80px; align-items: center;
-    position: relative; z-index: 2; width: 100%;
-  }
-  .hero-eyebrow {
-    font-size: 11px; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase;
-    color: var(--warm); margin-bottom: 28px;
-  }
-  .hero h1 {
-    font-family: var(--serif); font-weight: 500;
-    font-size: clamp(38px, 5vw, 64px); line-height: 1.06;
-    margin-bottom: 28px; letter-spacing: -0.015em;
-  }
-  .hero h1 em { color: var(--warm); font-style: italic; font-weight: 700; }
-  .hero-sub {
-    font-size: 18px; color: rgba(245, 240, 232, 0.82);
-    margin-bottom: 38px; max-width: 580px; line-height: 1.65;
-  }
-  .hero-actions { display: flex; gap: 18px; flex-wrap: wrap; align-items: center; }
-  .hero-phone {
-    font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
-    color: rgba(245, 240, 232, 0.7);
-  }
-  .hero-phone strong {
-    display: block; font-family: var(--serif); font-size: 20px;
-    color: var(--cream); font-weight: 500; letter-spacing: 0; margin-top: 2px;
-  }
-  .trust-chips {
-    display: flex; flex-wrap: wrap; gap: 10px; margin-top: 38px;
-  }
-  .chip {
-    font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
-    color: rgba(245, 240, 232, 0.9); padding: 7px 14px;
-    border: 1px solid rgba(201, 168, 120, 0.36); border-radius: 2px;
-    background: rgba(201, 168, 120, 0.08);
-  }
+  .eyebrow::before { content: ''; width: 34px; height: 2px; background: var(--red); display: inline-block; }
+  .eyebrow.gold { color: var(--warm); }
+  .eyebrow.gold::before { background: var(--warm); }
 
-  /* Hero card */
-  .hero-card {
-    background: var(--cream); border-radius: 4px;
-    padding: 40px 36px; color: var(--ink);
-    box-shadow: 0 32px 72px rgba(0,0,0,0.30);
-    border-top: 4px solid var(--warm);
-  }
-  .hero-card-label {
-    font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--rust); margin-bottom: 18px;
-  }
-  .hero-card h3 {
-    font-family: var(--serif); font-size: 26px; font-weight: 700;
-    color: var(--navy); line-height: 1.2; margin-bottom: 16px;
-  }
-  .hero-card-divider { width: 52px; height: 2px; background: var(--warm); margin: 20px 0 24px; }
-  .stat-row {
-    display: flex; gap: 16px; padding: 14px 0;
-    border-bottom: 1px solid var(--line);
-  }
-  .stat-row:last-child { border-bottom: none; }
-  .stat-row .num {
-    font-family: var(--serif); font-size: 36px; font-weight: 700;
-    color: var(--rust); line-height: 1; min-width: 64px;
-  }
-  .stat-row .lbl { font-size: 13px; color: var(--ink-soft); line-height: 1.45; padding-top: 4px; }
-  .stat-row .lbl strong { color: var(--navy); display: block; font-size: 14px; margin-bottom: 2px; }
-
-  @media (max-width: 960px) {
-    .hero-inner { grid-template-columns: 1fr; gap: 52px; }
-    .hero { min-height: auto; padding: 100px 0 80px; }
-  }
-
-  /* ===================== TRUST BAND ===================== */
-  .trust-band {
-    background: var(--white); padding: 48px 0;
-    border-bottom: 1px solid var(--line);
-  }
-  .trust-grid {
-    display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px;
-    text-align: center;
-  }
-  .trust-item .big {
-    font-family: var(--serif); font-size: 44px; font-weight: 700;
-    color: var(--navy); line-height: 1; display: block;
-  }
-  .trust-item .big em { color: var(--rust); font-style: normal; }
-  .trust-item .lbl {
-    font-size: 11px; letter-spacing: 0.17em; text-transform: uppercase;
-    color: var(--ink-soft); margin-top: 10px; font-weight: 600;
-  }
-  @media (max-width: 760px) { .trust-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; } }
-
-  /* ===================== SECTIONS ===================== */
-  section { padding: 96px 0; }
-  .section-eyebrow {
-    font-size: 11px; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase;
-    color: var(--rust); margin-bottom: 16px;
-  }
-  .section-title {
-    font-family: var(--serif); font-weight: 500;
-    font-size: clamp(32px, 4.2vw, 50px); line-height: 1.1;
-    color: var(--navy); margin-bottom: 18px; letter-spacing: -0.015em;
-  }
-  .section-title em { color: var(--rust); font-style: italic; font-weight: 700; }
-  .section-sub { font-size: 18px; color: var(--ink-soft); line-height: 1.65; max-width: 720px; }
-  .section-header { margin-bottom: 60px; }
-  .section-header.center { text-align: center; }
-  .section-header.center .section-sub { margin: 0 auto; }
-
-  /* ===================== HERITAGE ===================== */
-  .heritage { background: var(--bone); }
-  .heritage-grid {
-    display: grid; grid-template-columns: 1fr 1.35fr; gap: 72px; align-items: center;
-  }
-  .heritage-visual {
-    aspect-ratio: 4/5; border-radius: 4px; overflow: hidden;
-    background: linear-gradient(150deg, var(--steel) 0%, var(--navy-deep) 100%);
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
-    text-align: center; padding: 48px 36px; color: var(--cream);
-    box-shadow: 0 28px 64px rgba(28, 51, 71, 0.24);
-  }
-  .heritage-visual .yr-label {
-    font-size: 11px; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase;
-    color: var(--warm); margin-bottom: 14px;
-  }
-  .heritage-visual .yr {
-    font-family: var(--serif); font-size: 80px; font-style: italic;
-    font-weight: 700; line-height: 1; color: var(--cream); margin-bottom: 20px;
-  }
-  .heritage-visual .yr-quote {
-    font-family: var(--serif); font-size: 19px; font-style: italic;
-    color: rgba(245, 240, 232, 0.88); line-height: 1.5;
-  }
-  .heritage-content h2 {
-    font-family: var(--serif); font-weight: 500;
-    font-size: clamp(30px, 3.8vw, 46px); line-height: 1.1;
-    color: var(--navy); margin-bottom: 22px; letter-spacing: -0.01em;
-  }
-  .heritage-content h2 em { color: var(--rust); font-style: italic; font-weight: 700; }
-  .heritage-content p { font-size: 17px; color: var(--ink-soft); margin-bottom: 18px; line-height: 1.7; }
-  .pull-quote {
-    font-family: var(--serif); font-style: italic;
-    font-size: 22px; color: var(--navy); line-height: 1.45;
-    padding: 24px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
-    margin: 28px 0;
-  }
-  @media (max-width: 960px) { .heritage-grid { grid-template-columns: 1fr; gap: 44px; } }
-
-  /* ===================== SUCCESSION ===================== */
-  .succession { background: var(--navy); color: var(--cream); position: relative; overflow: hidden; }
-  .succession::before {
-    content: ''; position: absolute; top: -25%; right: -10%;
-    width: 650px; height: 650px;
-    background: radial-gradient(circle, rgba(201, 168, 120, 0.18), transparent 60%);
-    filter: blur(80px); pointer-events: none;
-  }
-  .succession .section-eyebrow { color: var(--warm); }
-  .succession-grid {
-    display: grid; grid-template-columns: 1fr 1.15fr; gap: 72px; align-items: center;
-    position: relative; z-index: 2;
-  }
-  .succession-visual {
-    aspect-ratio: 1/1; border-radius: 4px; overflow: hidden;
-    background: linear-gradient(155deg, var(--rust) 0%, var(--navy-deep) 100%);
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
-    text-align: center; padding: 48px 40px;
-    box-shadow: 0 32px 70px rgba(0,0,0,0.36);
-  }
-  .succession-visual .vis-label {
-    font-size: 11px; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase;
-    color: var(--warm); margin-bottom: 18px;
-  }
-  .succession-visual .vis-headline {
-    font-family: var(--serif); font-size: 32px; font-style: italic; font-weight: 700;
-    color: var(--cream); line-height: 1.2; margin-bottom: 20px;
-  }
-  .succession-visual .vis-sub {
-    font-family: var(--serif); font-size: 17px; font-style: italic;
-    color: rgba(245, 240, 232, 0.86); line-height: 1.5;
-  }
-  .succession-content h2 {
-    font-family: var(--serif); font-weight: 500;
-    font-size: clamp(30px, 3.8vw, 46px); line-height: 1.1;
-    color: var(--cream); margin-bottom: 22px;
-  }
-  .succession-content h2 em { color: var(--warm); font-style: italic; font-weight: 700; }
-  .succession-content p { font-size: 17px; color: rgba(245, 240, 232, 0.82); margin-bottom: 18px; line-height: 1.7; }
-  .timeline-list { margin-top: 8px; }
-  .timeline-list li {
-    font-size: 15px; color: rgba(245, 240, 232, 0.88);
-    padding: 10px 0 10px 28px; position: relative;
-    border-bottom: 1px solid rgba(201, 168, 120, 0.15);
-  }
-  .timeline-list li:last-child { border-bottom: none; }
-  .timeline-list li::before {
-    content: ''; position: absolute; left: 0; top: 16px;
-    width: 8px; height: 8px; border-radius: 50%;
-    background: var(--warm);
-  }
-  .timeline-list strong { color: var(--cream); }
-  @media (max-width: 960px) { .succession-grid { grid-template-columns: 1fr; gap: 44px; } }
-
-  /* ===================== SERVICES ===================== */
-  .services { background: var(--cream); }
-  .services-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px;
-  }
-  .service-card {
-    background: var(--white); border: 1px solid var(--line);
-    border-radius: 4px; padding: 32px 28px;
-    position: relative; overflow: hidden;
-    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
-  }
-  .service-card::before {
-    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-    background: var(--warm); transform: scaleX(0); transform-origin: left;
-    transition: transform 0.3s;
-  }
-  .service-card:hover {
-    transform: translateY(-5px); border-color: var(--warm);
-    box-shadow: 0 20px 48px rgba(28, 51, 71, 0.10);
-  }
-  .service-card:hover::before { transform: scaleX(1); }
-  .service-card.primary { border-color: var(--warm); }
-  .service-card.primary::before { transform: scaleX(1); background: var(--rust); }
-  .service-icon {
-    width: 48px; height: 48px; margin-bottom: 20px;
-    color: var(--rust);
-  }
-  .service-tag {
-    font-size: 10px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--rust); margin-bottom: 12px;
-  }
-  .service-card h3 {
-    font-family: var(--serif); font-size: 24px; font-weight: 700;
-    color: var(--navy); margin-bottom: 14px; line-height: 1.2;
-  }
-  .service-card p { font-size: 15px; color: var(--ink-soft); margin-bottom: 20px; line-height: 1.65; }
-  .service-detail { font-size: 13px; color: var(--steel); line-height: 1.5; font-weight: 500; }
-  @media (max-width: 1020px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 680px) { .services-grid { grid-template-columns: 1fr; } }
-
-  /* ===================== PROCESS ===================== */
-  .process { background: var(--bone); }
-  .process-steps {
-    display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
-  }
-  .process-step {
-    background: var(--white); border: 1px solid var(--line);
-    border-radius: 4px; padding: 32px 26px; position: relative;
-  }
-  .step-number {
-    font-family: var(--serif); font-size: 56px; font-weight: 700;
-    color: var(--warm); line-height: 1; margin-bottom: 16px;
-  }
-  .process-step h4 {
-    font-family: var(--serif); font-size: 21px; font-weight: 700;
-    color: var(--navy); margin-bottom: 10px; line-height: 1.2;
-  }
-  .process-step p { font-size: 14px; color: var(--ink-soft); line-height: 1.65; }
-  @media (max-width: 900px) { .process-steps { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 540px) { .process-steps { grid-template-columns: 1fr; } }
-
-  /* ===================== CREW ===================== */
-  .crew { background: var(--white); }
-  .crew-grid {
-    display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
-  }
-  .crew-card {
-    border: 1px solid var(--line); border-radius: 4px; overflow: hidden;
-    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
-  }
-  .crew-card:hover { transform: translateY(-4px); border-color: var(--warm); box-shadow: 0 16px 40px rgba(28, 51, 71, 0.10); }
-  .crew-banner {
-    aspect-ratio: 4/3;
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
-    text-align: center; padding: 28px 20px;
-  }
-  .crew-banner.c1 { background: linear-gradient(155deg, var(--warm), var(--navy-deep)); }
-  .crew-banner.c2 { background: linear-gradient(155deg, var(--sky), var(--navy)); }
-  .crew-banner.c3 { background: linear-gradient(155deg, var(--rust), var(--navy-deep)); }
-  .crew-banner.c4 { background: linear-gradient(155deg, var(--sky-light), var(--steel)); }
-  .crew-banner .tenure-label {
-    font-size: 10px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--cream); opacity: 0.85; margin-bottom: 8px;
-  }
-  .crew-banner .tenure-years {
-    font-family: var(--serif); font-size: 58px; font-weight: 700;
-    color: var(--white); line-height: 1;
-  }
-  .crew-banner .tenure-unit {
-    font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
-    color: rgba(255,255,255,0.82); font-weight: 600; margin-top: 6px;
-  }
-  .crew-body { padding: 20px 22px 26px; }
-  .crew-role {
-    font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;
-    color: var(--rust); margin-bottom: 8px;
-  }
-  .crew-body h3 {
-    font-family: var(--serif); font-size: 18px; font-weight: 700;
-    color: var(--navy); margin-bottom: 8px; line-height: 1.25;
-  }
-  .crew-body p { font-size: 13px; color: var(--ink-soft); line-height: 1.6; }
-  .crew-total {
-    margin-top: 44px; text-align: center;
-    background: var(--bone); border: 1px solid var(--line); border-radius: 4px;
-    border-top: 4px solid var(--warm); padding: 34px 28px;
-    max-width: 640px; margin-left: auto; margin-right: auto;
-  }
-  .crew-total .big {
-    font-family: var(--serif); font-size: 72px; font-weight: 700;
-    color: var(--rust); line-height: 1; display: block;
-  }
-  .crew-total .total-lbl {
-    font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase;
-    color: var(--navy); margin-top: 10px; font-weight: 700;
-  }
-  .crew-total p { font-size: 14px; color: var(--ink-soft); margin-top: 14px; line-height: 1.6; }
-  @media (max-width: 900px) { .crew-grid { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 520px) { .crew-grid { grid-template-columns: 1fr; max-width: 380px; margin: 0 auto; } }
-
-  /* ===================== INSURANCE ===================== */
-  .insurance { background: var(--cream); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-  .insurance-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
-  }
-  .insurance-content h2 {
-    font-family: var(--serif); font-weight: 500;
-    font-size: clamp(30px, 3.8vw, 44px); line-height: 1.12;
-    color: var(--navy); margin-bottom: 22px;
-  }
-  .insurance-content h2 em { color: var(--rust); font-style: italic; font-weight: 700; }
-  .insurance-content p { font-size: 17px; color: var(--ink-soft); margin-bottom: 16px; line-height: 1.7; }
-  .check-list { margin-top: 24px; }
-  .check-list li {
-    font-size: 15px; color: var(--ink-soft); padding: 11px 0 11px 30px;
-    position: relative; border-bottom: 1px solid var(--line); line-height: 1.6;
-  }
-  .check-list li:last-child { border-bottom: none; }
-  .check-list li::before {
-    content: '';
-    position: absolute; left: 0; top: 14px;
-    width: 16px; height: 16px; border-radius: 50%;
-    background: var(--rust);
+  /* ============================================================
+     STICKY CLICK-TO-CALL BAR (persistent top strip)
+  ============================================================ */
+  .cta-strip {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+    background: var(--red);
     display: flex; align-items: center; justify-content: center;
+    gap: 24px; padding: 9px 20px;
+    font-family: var(--cond); font-size: 14px; letter-spacing: 0.06em;
+    text-transform: uppercase; color: var(--white);
+    box-shadow: 0 2px 16px rgba(192,58,42,0.55);
   }
-  .check-list li::after {
-    content: '';
-    position: absolute; left: 5px; top: 18px;
-    width: 6px; height: 4px;
-    border-left: 2px solid var(--white); border-bottom: 2px solid var(--white);
-    transform: rotate(-45deg);
+  .cta-strip a { color: var(--white); font-weight: 700; font-size: 16px; letter-spacing: 0.02em; }
+  .cta-strip a:hover { color: var(--warm-lt); }
+  .cta-strip .pipe { opacity: 0.45; }
+  @media (max-width: 600px) {
+    .cta-strip { flex-direction: column; gap: 4px; padding: 8px 16px; font-size: 12px; }
+    .cta-strip a { font-size: 15px; }
+    .cta-strip .pipe { display: none; }
   }
-  .check-list strong { color: var(--navy); }
-  .insurance-card {
-    background: var(--white); border: 1px solid var(--line); border-radius: 4px;
-    border-top: 4px solid var(--warm); padding: 38px 34px;
-  }
-  .insurance-card .card-tag {
-    font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--rust); margin-bottom: 16px;
-  }
-  .insurance-card h3 {
-    font-family: var(--serif); font-size: 26px; font-weight: 700;
-    color: var(--navy); margin-bottom: 14px; line-height: 1.2;
-  }
-  .insurance-card .divider { width: 52px; height: 2px; background: var(--warm); margin: 18px 0 22px; }
-  .insurance-card p { font-size: 15px; color: var(--ink-soft); line-height: 1.7; }
-  @media (max-width: 880px) { .insurance-grid { grid-template-columns: 1fr; gap: 40px; } }
 
-  /* ===================== AREAS ===================== */
-  .areas { background: var(--bone); }
-  .areas-grid {
-    display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px;
-    max-width: 920px; margin: 0 auto;
+  /* ============================================================
+     HEADER
+  ============================================================ */
+  header {
+    position: sticky; top: 38px; z-index: 100;
+    background: rgba(13,15,18,0.96);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(197,160,90,0.15);
+    transition: top 0.3s, padding 0.3s, box-shadow 0.3s;
   }
-  .area-pill {
-    background: var(--white); border: 1px solid var(--line);
-    border-radius: 2px; padding: 18px 16px; text-align: center;
-    transition: all 0.25s;
+  header.strip-gone { top: 0; }
+  header::after {
+    content: ''; position: absolute; left: 0; bottom: -3px;
+    height: 3px; width: 100%;
+    background: linear-gradient(90deg, var(--red) 0%, var(--red-bright) 50%, var(--red) 100%);
   }
-  .area-pill:hover { border-color: var(--warm); transform: translateY(-2px); box-shadow: 0 8px 22px rgba(28, 51, 71, 0.08); }
-  .area-pill .city-name {
-    font-family: var(--serif); font-size: 18px; font-weight: 700;
-    color: var(--navy); line-height: 1.2;
+  header.condensed { box-shadow: 0 8px 30px rgba(0,0,0,0.5); }
+  .nav { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 18px 0; transition: padding 0.3s; }
+  header.condensed .nav { padding: 11px 0; }
+  .brand {
+    font-family: var(--display); font-size: 26px; letter-spacing: 0.02em;
+    color: var(--cream); line-height: 0.92; text-transform: uppercase;
+    transition: font-size 0.3s;
   }
-  .area-pill .dist {
-    font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
-    color: var(--ink-soft); margin-top: 4px; font-weight: 600;
-  }
-  .areas-note {
-    text-align: center; margin-top: 36px; font-size: 14px;
-    color: var(--ink-soft); font-style: italic;
-  }
-  @media (max-width: 860px) { .areas-grid { grid-template-columns: repeat(2, 1fr); } }
-
-  /* ===================== REVIEWS ===================== */
-  .reviews { background: var(--white); }
-  .reviews-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
-  }
-  .review-card {
-    background: var(--cream); border: 1px solid var(--line); border-radius: 4px;
-    padding: 30px 26px;
-  }
-  .review-stars { display: flex; gap: 4px; margin-bottom: 14px; }
-  .review-stars svg { width: 18px; height: 18px; fill: var(--warm); }
-  .review-card blockquote {
-    font-family: var(--serif); font-style: italic; font-size: 17px;
-    color: var(--navy); line-height: 1.55; margin-bottom: 16px;
-  }
-  .review-attr { font-size: 13px; font-weight: 600; color: var(--ink-soft); }
-  @media (max-width: 900px) { .reviews-grid { grid-template-columns: 1fr; max-width: 560px; margin: 0 auto; } }
-
-  /* ===================== CONTACT ===================== */
-  .contact { background: var(--bone); }
-  .contact-grid {
-    display: grid; grid-template-columns: 1fr 1.1fr; gap: 72px; align-items: start;
-  }
-  .contact-info h2 {
-    font-family: var(--serif); font-weight: 500;
-    font-size: clamp(30px, 3.6vw, 44px); line-height: 1.1;
-    color: var(--navy); margin-bottom: 20px;
-  }
-  .contact-info h2 em { color: var(--rust); font-style: italic; font-weight: 700; }
-  .contact-info p { font-size: 17px; color: var(--ink-soft); margin-bottom: 28px; line-height: 1.7; }
-  .contact-details { display: flex; flex-direction: column; gap: 0; margin-bottom: 28px; }
-  .contact-row {
-    display: flex; align-items: flex-start; gap: 16px; padding: 16px 0;
-    border-bottom: 1px solid var(--line);
-  }
-  .contact-row:first-child { border-top: 1px solid var(--line); }
-  .contact-row svg { width: 20px; height: 20px; color: var(--rust); flex-shrink: 0; margin-top: 2px; }
-  .contact-row .contact-label {
-    font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;
-    color: var(--rust); margin-bottom: 4px;
-  }
-  .contact-row .contact-value { font-size: 15px; color: var(--navy); font-weight: 500; line-height: 1.4; }
-  .contact-row .contact-value a { color: var(--navy); text-decoration: underline; text-underline-offset: 3px; }
-  .contact-row .contact-value a:hover { color: var(--rust); }
-
-  /* Form */
-  .estimate-form {
-    background: var(--white); border: 1px solid var(--line); border-radius: 4px;
-    border-top: 4px solid var(--rust); padding: 40px 36px;
-  }
-  .estimate-form h3 {
-    font-family: var(--serif); font-size: 28px; font-weight: 700;
-    color: var(--navy); margin-bottom: 8px;
-  }
-  .estimate-form .form-sub { font-size: 15px; color: var(--ink-soft); margin-bottom: 28px; }
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
-  .form-row.full { grid-template-columns: 1fr; }
-  label { display: block; font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--navy); margin-bottom: 6px; }
-  input, select, textarea {
-    width: 100%; padding: 12px 14px; background: var(--cream);
-    border: 1px solid var(--line); border-radius: 2px;
-    font-family: var(--sans); font-size: 15px; color: var(--ink);
-    transition: border-color 0.2s, box-shadow 0.2s;
-  }
-  input:focus, select:focus, textarea:focus {
-    outline: none; border-color: var(--rust);
-    box-shadow: 0 0 0 3px rgba(176, 90, 54, 0.12);
-  }
-  textarea { resize: vertical; min-height: 100px; }
-  select { appearance: none; -webkit-appearance: none; cursor: pointer; }
-  .form-note { font-size: 12px; color: var(--ink-soft); margin-top: 12px; line-height: 1.6; }
-  @media (max-width: 880px) { .contact-grid { grid-template-columns: 1fr; gap: 44px; } }
-  @media (max-width: 580px) { .form-row { grid-template-columns: 1fr; } }
-
-  /* ===================== FINAL CTA ===================== */
-  .final-cta {
-    background: linear-gradient(135deg, var(--rust) 0%, var(--rust-deep) 100%);
-    color: var(--cream); text-align: center; padding: 110px 0;
-    position: relative; overflow: hidden;
-  }
-  .final-cta::before {
-    content: ''; position: absolute; top: -35%; left: 50%; transform: translateX(-50%);
-    width: 800px; height: 800px;
-    background: radial-gradient(circle, rgba(201, 168, 120, 0.26), transparent 55%);
-    filter: blur(80px); pointer-events: none;
-  }
-  .final-cta .container { position: relative; z-index: 2; }
-  .final-cta h2 {
-    font-family: var(--serif); font-weight: 500;
-    font-size: clamp(36px, 5vw, 56px); line-height: 1.08;
-    margin-bottom: 22px; letter-spacing: -0.015em;
-  }
-  .final-cta p {
-    font-size: 19px; color: rgba(245, 240, 232, 0.90);
-    max-width: 640px; margin: 0 auto 46px; line-height: 1.65;
-  }
-  .final-actions { display: flex; gap: 22px; justify-content: center; flex-wrap: wrap; align-items: center; }
-  .phone-pair { display: flex; flex-direction: column; align-items: flex-start; }
-  .phone-pair .ph-label {
-    font-size: 10px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase;
-    color: rgba(245, 240, 232, 0.70); margin-bottom: 2px;
-  }
-  .phone-pair a {
-    font-family: var(--serif); font-size: 22px; font-weight: 700;
-    color: var(--cream); text-decoration: underline; text-underline-offset: 4px;
-    text-decoration-color: rgba(245, 240, 232, 0.4);
-  }
-  .phone-pair a:hover { text-decoration-color: var(--cream); }
-
-  /* ===================== FOOTER ===================== */
-  footer {
-    background: var(--navy-deep); color: rgba(245, 240, 232, 0.68);
-    padding: 72px 0 36px;
-  }
-  .foot-grid {
-    display: grid; grid-template-columns: 1.7fr 1fr 1fr 1fr; gap: 52px;
-    margin-bottom: 48px;
-  }
-  .foot-brand {
-    font-family: var(--serif); font-size: 22px; font-weight: 700;
-    color: var(--cream); margin-bottom: 14px; line-height: 1.2;
-  }
-  .foot-brand small {
-    display: block; font-family: var(--sans);
-    font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+  header.condensed .brand { font-size: 22px; }
+  .brand small {
+    display: block; font-family: var(--cond);
+    font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase;
     color: var(--warm); font-weight: 600; margin-top: 4px;
   }
-  .foot-desc { font-size: 14px; line-height: 1.7; }
-  footer h5 {
-    color: var(--warm); font-size: 11px; letter-spacing: 0.22em;
-    text-transform: uppercase; margin-bottom: 16px; font-weight: 700;
+  .nav-links { display: flex; gap: 28px; font-family: var(--cond); font-size: 14px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.10em; }
+  .nav-links a { color: rgba(240,236,228,0.75); transition: color 0.2s; position: relative; padding: 4px 0; }
+  .nav-links a::after { content: ''; position: absolute; left: 0; bottom: -2px; width: 0; height: 2px; background: var(--warm); transition: width 0.25s; }
+  .nav-links a:hover { color: var(--cream); }
+  .nav-links a:hover::after { width: 100%; }
+  .nav-right { display: flex; align-items: center; gap: 14px; }
+  .nav-call {
+    background: var(--red); color: var(--white);
+    padding: 11px 20px; border-radius: 4px;
+    font-family: var(--cond); font-size: 14px; font-weight: 600; letter-spacing: 0.05em;
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    white-space: nowrap; display: inline-flex; align-items: center; gap: 8px;
+    box-shadow: 0 4px 14px rgba(192,58,42,0.4);
   }
-  footer ul { font-size: 14px; display: flex; flex-direction: column; gap: 8px; }
-  footer li a:hover { color: var(--warm); }
-  .foot-bottom {
-    border-top: 1px solid rgba(201, 168, 120, 0.18); padding-top: 26px;
-    font-size: 12px; letter-spacing: 0.04em;
-  }
-  .foot-bottom-row {
-    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px;
-    line-height: 1.7;
-  }
-  .signoff a { color: var(--warm); text-decoration: underline; text-underline-offset: 3px; }
-  .signoff a:hover { color: var(--cream); }
-  @media (max-width: 960px) { .foot-grid { grid-template-columns: 1fr 1fr; gap: 36px; } }
-  @media (max-width: 560px) { .foot-grid { grid-template-columns: 1fr; } }
-
-  /* ===================== MOTION ===================== */
-  @media (prefers-reduced-motion: no-preference) {
-    .reveal {
-      opacity: 0; transform: translateY(28px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
+  .nav-call:hover { background: var(--red-bright); transform: translateY(-1px); box-shadow: 0 8px 22px rgba(192,58,42,0.5); }
+  .nav-call svg { width: 15px; height: 15px; }
+  .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; }
+  .hamburger span { display: block; width: 26px; height: 2px; background: var(--cream); transition: transform 0.3s, opacity 0.3s; }
+  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .mobile-menu { display: none; }
+  @media (max-width: 920px) {
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .nav-call .full { display: none; }
+    .nav-call .short { display: inline; }
+    .mobile-menu {
+      display: block; position: fixed; top: 0; right: 0; bottom: 0; width: min(82vw, 340px);
+      background: var(--dark-2); z-index: 250; padding: 90px 32px 32px;
+      transform: translateX(105%); transition: transform 0.35s cubic-bezier(0.16,1,0.3,1);
+      box-shadow: -20px 0 60px rgba(0,0,0,0.6);
+      border-left: 3px solid var(--red);
     }
-    .reveal.visible { opacity: 1; transform: none; }
-    .reveal-delay-1 { transition-delay: 0.1s; }
-    .reveal-delay-2 { transition-delay: 0.2s; }
-    .reveal-delay-3 { transition-delay: 0.3s; }
-    .reveal-delay-4 { transition-delay: 0.4s; }
+    .mobile-menu.open { transform: translateX(0); }
+    .mobile-menu a { display: block; font-family: var(--cond); font-size: 22px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--cream); padding: 16px 0; border-bottom: 1px solid rgba(240,236,228,0.1); }
+    .mobile-menu .mm-call { margin-top: 24px; background: var(--red); text-align: center; border-radius: 5px; padding: 18px; font-size: 20px; border: none; box-shadow: 0 8px 22px rgba(192,58,42,0.4); }
+    .mm-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.7); z-index: 200; opacity: 0; visibility: hidden; transition: opacity 0.3s; backdrop-filter: blur(2px); }
+    .mm-overlay.open { opacity: 1; visibility: visible; }
+  }
+  @media (min-width: 921px) { .nav-call .short { display: none; } }
+
+  /* ============================================================
+     HERO
+  ============================================================ */
+  .hero {
+    min-height: 100vh; min-height: 100svh;
+    display: flex; align-items: center;
+    padding: 140px 0 100px;
+    position: relative; overflow: hidden;
+    color: var(--cream);
+  }
+  /* Real photo from live site as hero background */
+  .hero-bg {
+    position: absolute; inset: 0; z-index: 0; pointer-events: none;
+    background-image: url('https://stauditcentralusaa01prod.blob.core.windows.net/files/Accounts/1/Locations/f6ada406-3e7e-4ab0-8ce9-c665cafebe11/SliderImage/8e4a3f9f-7f65-4a42-a603-9bfbfdce1b2a.jpg');
+    background-size: cover; background-position: center 40%;
+    opacity: 0.22;
+  }
+  .hero-bg::after {
+    content: ''; position: absolute; inset: 0;
+    background:
+      linear-gradient(100deg, rgba(13,15,18,0.95) 0%, rgba(13,15,18,0.72) 50%, rgba(13,15,18,0.38) 100%),
+      linear-gradient(0deg, rgba(13,15,18,0.90) 0%, transparent 40%);
+  }
+  .hero-grid {
+    position: absolute; inset: 0; z-index: 0; pointer-events: none; opacity: 0.4;
+    background-image:
+      linear-gradient(rgba(197,160,90,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(197,160,90,0.05) 1px, transparent 1px);
+    background-size: 64px 64px;
+    -webkit-mask-image: radial-gradient(ellipse 80% 80% at 70% 50%, #000, transparent 80%);
+    mask-image: radial-gradient(ellipse 80% 80% at 70% 50%, #000, transparent 80%);
+  }
+  .hero-streak {
+    position: absolute; top: 0; bottom: 0; right: -5%; width: 46%; z-index: 0; pointer-events: none;
+    background: linear-gradient(115deg, transparent 0%, transparent 38%, rgba(192,58,42,0.5) 39%, rgba(192,58,42,0.5) 41%, transparent 42%, transparent 56%, rgba(197,160,90,0.28) 57%, rgba(197,160,90,0.28) 58%, transparent 59%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent, #000 30%, #000 70%, transparent);
+    mask-image: linear-gradient(to bottom, transparent, #000 30%, #000 70%, transparent);
+    opacity: 0.65;
+  }
+  /* Giant ghost year watermark */
+  .hero-watermark {
+    position: absolute; right: -2%; bottom: -10%; z-index: 0; pointer-events: none;
+    font-family: var(--display); font-size: 30vw; line-height: 0.7;
+    color: rgba(240,236,228,0.028); letter-spacing: -0.02em; white-space: nowrap;
+    -webkit-user-select: none; user-select: none;
+  }
+  .hero-inner { position: relative; z-index: 2; max-width: 900px; }
+  .hero h1 {
+    font-family: var(--display); font-weight: 400;
+    font-size: clamp(52px, 9vw, 118px); line-height: 0.9;
+    margin-bottom: 26px; letter-spacing: 0.005em;
+    color: var(--cream); text-transform: uppercase;
+    text-shadow: 0 4px 40px rgba(0,0,0,0.4);
+  }
+  .hero h1 .accent { color: var(--warm); }
+  .hero-sub { font-size: clamp(16px, 1.7vw, 19px); color: rgba(240,236,228,0.84); margin-bottom: 38px; max-width: 660px; line-height: 1.65; }
+  .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+  .btn-hero {
+    background: linear-gradient(180deg, var(--red-bright), var(--red));
+    color: var(--white); padding: 20px 38px; border-radius: 4px;
+    font-family: var(--cond); font-size: 22px; font-weight: 600; letter-spacing: 0.03em;
+    transition: transform 0.2s, box-shadow 0.2s; display: inline-flex; align-items: center; gap: 12px;
+    box-shadow: 0 10px 30px rgba(192,58,42,0.5); text-transform: uppercase;
+  }
+  .btn-hero svg { width: 22px; height: 22px; }
+  .btn-hero:hover { transform: translateY(-3px); box-shadow: 0 18px 42px rgba(192,58,42,0.6); }
+  .btn-ghost-hero {
+    background: rgba(240,236,228,0.04); color: var(--cream); border: 1.5px solid rgba(240,236,228,0.32);
+    padding: 19px 32px; border-radius: 4px;
+    font-family: var(--cond); font-size: 16px; font-weight: 500; letter-spacing: 0.10em; text-transform: uppercase;
+    transition: all 0.25s;
+  }
+  .btn-ghost-hero:hover { border-color: var(--warm); color: var(--warm); background: rgba(197,160,90,0.08); transform: translateY(-2px); }
+  .hero-chips { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 40px; }
+  .chip {
+    background: rgba(240,236,228,0.06); border: 1px solid rgba(197,160,90,0.26);
+    color: var(--cream); padding: 9px 18px; border-radius: 30px;
+    font-family: var(--cond); font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .chip::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--warm); flex-shrink: 0; }
+  .scroll-hint {
+    position: absolute; bottom: 26px; left: 50%; transform: translateX(-50%); z-index: 3;
+    font-family: var(--cond); font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase;
+    color: rgba(240,236,228,0.40); display: flex; flex-direction: column; align-items: center; gap: 8px;
+  }
+  .scroll-hint .line { width: 1px; height: 34px; background: linear-gradient(var(--warm), transparent); animation: scrollpulse 1.8s ease-in-out infinite; }
+  @keyframes scrollpulse { 0%,100%{ opacity:0.3; transform:scaleY(0.6); } 50%{ opacity:1; transform:scaleY(1); } }
+  @media (max-width: 600px) { .scroll-hint { display: none; } }
+
+  /* ============================================================
+     STATS BAND
+  ============================================================ */
+  .stats-band {
+    background: linear-gradient(180deg, var(--red) 0%, var(--red-deep) 100%);
+    color: var(--white); position: relative;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+  .stat-cell {
+    text-align: center; padding: 38px 18px;
+    border-right: 1px solid rgba(255,255,255,0.13);
+    position: relative; transition: background 0.3s;
+  }
+  .stat-cell:hover { background: rgba(0,0,0,0.12); }
+  .stat-cell:last-child { border-right: none; }
+  .stat-num { font-family: var(--display); font-size: 56px; line-height: 1; color: var(--white); letter-spacing: 0.01em; }
+  .stat-num .sm { font-size: 28px; }
+  .stat-lbl { font-family: var(--cond); font-size: 12px; font-weight: 500; letter-spacing: 0.16em; margin-top: 8px; color: rgba(255,255,255,0.90); text-transform: uppercase; }
+  @media (max-width: 760px) {
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .stat-cell:nth-child(2) { border-right: none; }
+    .stat-cell:nth-child(1), .stat-cell:nth-child(2) { border-bottom: 1px solid rgba(255,255,255,0.13); }
+  }
+
+  /* ============================================================
+     SECTION BASE
+  ============================================================ */
+  section.light { background: #f0ece4; }
+  section.dark-bg { background: var(--dark-2); }
+  section.mid-bg { background: var(--dark-3); }
+  section { padding: 110px 0; position: relative; }
+  .section-title {
+    font-family: var(--display); font-weight: 400;
+    font-size: clamp(38px, 5.4vw, 64px); line-height: 0.96;
+    color: var(--dark); letter-spacing: 0.01em; margin-bottom: 18px; text-transform: uppercase;
+  }
+  .section-title.on-dark { color: var(--cream); }
+  .section-title .accent { color: var(--red); }
+  .section-title .gold { color: var(--warm); }
+  .section-sub { font-size: 18px; color: var(--ink-soft); max-width: 700px; margin-bottom: 56px; line-height: 1.65; }
+  .section-sub.on-dark { color: rgba(240,236,228,0.80); }
+
+  /* ============================================================
+     WORK GALLERY STRIP
+  ============================================================ */
+  .gallery-strip {
+    background: var(--dark);
+    padding: 0;
+    overflow: hidden;
+  }
+  .gallery-rail {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0;
+  }
+  .gallery-cell {
+    position: relative; overflow: hidden;
+    aspect-ratio: 4/3;
+  }
+  .gallery-cell img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform 0.5s cubic-bezier(0.16,1,0.3,1), filter 0.4s;
+    filter: saturate(0.85) brightness(0.88);
+  }
+  .gallery-cell:hover img { transform: scale(1.07); filter: saturate(1.05) brightness(0.96); }
+  .gallery-cell::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(0deg, rgba(13,15,18,0.72) 0%, transparent 45%);
+    pointer-events: none;
+  }
+  /* First cell is wider and taller -- hero image of the shop exterior */
+  .gallery-cell.main {
+    grid-column: span 2;
+    grid-row: span 1;
+    aspect-ratio: unset;
+  }
+  .gallery-cell.main img { height: 100%; min-height: 280px; }
+  @media (max-width: 860px) {
+    .gallery-rail { grid-template-columns: repeat(2, 1fr); }
+    .gallery-cell.main { grid-column: span 2; }
+    .gallery-cell:nth-child(n+5) { display: none; }
+  }
+  @media (max-width: 500px) {
+    .gallery-rail { grid-template-columns: 1fr; }
+    .gallery-cell.main { grid-column: 1; }
+    .gallery-cell:nth-child(n+4) { display: none; }
+  }
+
+  /* ============================================================
+     SERVICES
+  ============================================================ */
+  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  @media (max-width: 920px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 600px) { .services-grid { grid-template-columns: 1fr; } }
+  .svc-card {
+    background: var(--dark-3);
+    border: 1px solid rgba(197,160,90,0.14);
+    border-radius: 6px; padding: 34px 30px;
+    transition: transform 0.3s cubic-bezier(0.16,1,0.3,1), box-shadow 0.3s, border-color 0.3s;
+    position: relative; overflow: hidden;
+  }
+  .svc-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--red), var(--red-bright));
+  }
+  .svc-card:hover { transform: translateY(-7px); box-shadow: var(--sh-lift); border-color: rgba(192,58,42,0.35); }
+  .svc-card.flagship {
+    background: linear-gradient(155deg, var(--dark-3) 0%, var(--dark-2) 100%);
+    border-color: rgba(197,160,90,0.3);
+  }
+  .svc-card.flagship::before { background: linear-gradient(90deg, var(--warm), var(--warm-lt)); }
+  .svc-icon { width: 52px; height: 52px; border-radius: 10px; background: rgba(197,160,90,0.10); border: 1px solid rgba(197,160,90,0.22); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+  .svc-icon svg { width: 28px; height: 28px; stroke: var(--warm); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .svc-card:not(.flagship) .svc-icon { background: rgba(192,58,42,0.10); border-color: rgba(192,58,42,0.22); }
+  .svc-card:not(.flagship) .svc-icon svg { stroke: var(--red-bright); }
+  .svc-tag { display: inline-block; font-family: var(--cond); font-size: 12px; letter-spacing: 0.18em; font-weight: 600; text-transform: uppercase; color: var(--warm); margin-bottom: 10px; }
+  .svc-card:not(.flagship) .svc-tag { color: rgba(192,58,42,0.85); }
+  .svc-card h3 { font-family: var(--cond); font-weight: 600; font-size: 24px; line-height: 1.1; color: var(--cream); margin-bottom: 10px; }
+  .svc-card p { font-size: 15px; color: rgba(240,236,228,0.74); margin-bottom: 16px; line-height: 1.65; }
+  .svc-detail { font-size: 13px; color: rgba(240,236,228,0.55); font-weight: 500; }
+
+  /* ============================================================
+     STORY (heritage / succession)
+  ============================================================ */
+  .story-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 72px; align-items: center; }
+  @media (max-width: 880px) { .story-grid { grid-template-columns: 1fr; gap: 44px; } }
+  .story-visual {
+    position: relative; border-radius: 10px; overflow: hidden;
+    box-shadow: var(--sh-deep);
+  }
+  .story-visual img { width: 100%; display: block; filter: saturate(0.9) brightness(0.9); }
+  .story-visual .vis-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(0deg, rgba(13,15,18,0.80) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .story-visual .vis-badge {
+    position: absolute; bottom: 24px; left: 24px; right: 24px;
+    background: rgba(13,15,18,0.85); backdrop-filter: blur(8px);
+    border: 1px solid rgba(197,160,90,0.35); border-radius: 8px;
+    padding: 20px 22px;
+  }
+  .vis-badge-yr {
+    font-family: var(--display); font-size: 64px; line-height: 0.9;
+    color: var(--warm); letter-spacing: 0.01em;
+  }
+  .vis-badge-lbl {
+    font-family: var(--cond); font-size: 12px; font-weight: 600;
+    letter-spacing: 0.22em; text-transform: uppercase; color: rgba(240,236,228,0.75);
+    margin-top: 10px;
+  }
+  .story-content h2 {
+    font-family: var(--display); font-weight: 400;
+    font-size: clamp(38px, 5.4vw, 64px); line-height: 0.96;
+    color: var(--cream); margin-bottom: 24px; text-transform: uppercase;
+  }
+  .story-content h2 .accent { color: var(--warm); }
+  .story-content p { font-size: 16px; color: rgba(240,236,228,0.78); margin-bottom: 18px; line-height: 1.7; }
+  .story-pull {
+    border-left: 4px solid var(--warm); padding: 14px 0 14px 26px;
+    font-family: var(--cond); font-weight: 500; font-size: 22px;
+    color: var(--cream); margin: 28px 0; line-height: 1.4;
+    background: linear-gradient(90deg, rgba(197,160,90,0.07), transparent);
+  }
+  .timeline { list-style: none; margin-top: 8px; }
+  .timeline li {
+    font-size: 15px; color: rgba(240,236,228,0.82);
+    padding: 11px 0 11px 28px; position: relative;
+    border-bottom: 1px solid rgba(197,160,90,0.12);
+  }
+  .timeline li:last-child { border-bottom: none; }
+  .timeline li::before {
+    content: ''; position: absolute; left: 0; top: 17px;
+    width: 8px; height: 8px; border-radius: 50%; background: var(--warm);
+  }
+  .timeline strong { color: var(--cream); }
+
+  /* ============================================================
+     PROCESS
+  ============================================================ */
+  .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+  @media (max-width: 900px) { .process-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 540px) { .process-grid { grid-template-columns: 1fr; } }
+  .step-card {
+    background: var(--dark-3); border: 1px solid rgba(197,160,90,0.13);
+    border-radius: 8px; padding: 32px 26px; position: relative;
+  }
+  .step-num {
+    font-family: var(--display); font-size: 56px; line-height: 1;
+    color: var(--red); margin-bottom: 16px;
+    opacity: 0.9;
+  }
+  .step-card h4 { font-family: var(--cond); font-weight: 600; font-size: 20px; color: var(--cream); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.02em; }
+  .step-card p { font-size: 14px; color: rgba(240,236,228,0.68); line-height: 1.65; }
+  .step-card p a { color: var(--red-bright); text-decoration: underline; text-underline-offset: 2px; }
+
+  /* ============================================================
+     INSURANCE BAND
+  ============================================================ */
+  .ins-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+  @media (max-width: 880px) { .ins-grid { grid-template-columns: 1fr; gap: 44px; } }
+  .ins-content h2 { font-family: var(--display); font-weight: 400; font-size: clamp(36px, 5vw, 58px); line-height: 0.96; color: var(--cream); margin-bottom: 22px; text-transform: uppercase; }
+  .ins-content h2 .gold { color: var(--warm); }
+  .ins-content p { font-size: 16px; color: rgba(240,236,228,0.78); margin-bottom: 16px; line-height: 1.7; }
+  .check-list { list-style: none; margin-top: 26px; }
+  .check-list li { font-size: 15px; color: rgba(240,236,228,0.80); padding: 13px 0 13px 32px; position: relative; border-top: 1px solid rgba(197,160,90,0.12); }
+  .check-list li::before {
+    content: ''; position: absolute; left: 0; top: 19px;
+    width: 13px; height: 7px;
+    border-left: 2.5px solid var(--warm); border-bottom: 2.5px solid var(--warm);
+    transform: rotate(-45deg);
+  }
+  .check-list strong { color: var(--cream); }
+  .ins-card {
+    background: var(--dark-4); border: 1px solid rgba(197,160,90,0.22);
+    border-radius: 10px; padding: 38px 34px;
+    box-shadow: var(--sh-deep);
+  }
+  .ins-card .card-tag { font-family: var(--cond); font-size: 12px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--warm); margin-bottom: 16px; }
+  .ins-card h3 { font-family: var(--display); font-size: 28px; color: var(--cream); margin-bottom: 16px; text-transform: uppercase; }
+  .ins-card .divider { width: 52px; height: 2px; background: var(--warm); margin: 16px 0 22px; }
+  .ins-card p { font-size: 15px; color: rgba(240,236,228,0.74); line-height: 1.7; margin-bottom: 14px; }
+
+  /* ============================================================
+     CREW STATS
+  ============================================================ */
+  .crew-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  @media (max-width: 900px) { .crew-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 520px) { .crew-grid { grid-template-columns: 1fr; max-width: 360px; margin: 0 auto; } }
+  .crew-card {
+    border: 1px solid rgba(197,160,90,0.16); border-radius: 8px; overflow: hidden;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+    background: var(--dark-3);
+  }
+  .crew-card:hover { transform: translateY(-5px); border-color: rgba(197,160,90,0.4); box-shadow: var(--sh-lift); }
+  .crew-banner {
+    aspect-ratio: 4/3; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center; padding: 28px 20px;
+  }
+  .cb1 { background: linear-gradient(155deg, var(--warm-deep), var(--dark)); }
+  .cb2 { background: linear-gradient(155deg, var(--steel), var(--dark-2)); }
+  .cb3 { background: linear-gradient(155deg, var(--red-deep), var(--dark)); }
+  .cb4 { background: linear-gradient(155deg, var(--dark-3), var(--slate)); }
+  .crew-banner .ten-lbl { font-family: var(--cond); font-size: 11px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(240,236,228,0.75); margin-bottom: 8px; }
+  .crew-banner .ten-num { font-family: var(--display); font-size: 58px; color: var(--white); line-height: 1; }
+  .crew-banner .ten-unit { font-family: var(--cond); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.78); font-weight: 600; margin-top: 6px; }
+  .crew-body { padding: 20px 22px 26px; }
+  .crew-role { font-family: var(--cond); font-size: 11px; font-weight: 600; letter-spacing: 0.20em; text-transform: uppercase; color: var(--red-bright); margin-bottom: 8px; }
+  .crew-body h3 { font-family: var(--cond); font-size: 18px; font-weight: 600; color: var(--cream); margin-bottom: 8px; line-height: 1.25; text-transform: uppercase; letter-spacing: 0.02em; }
+  .crew-body p { font-size: 13px; color: rgba(240,236,228,0.62); line-height: 1.6; }
+  .crew-total {
+    margin-top: 44px; text-align: center; background: var(--dark-4); border: 1px solid rgba(197,160,90,0.22);
+    border-radius: 10px; border-top: 4px solid var(--warm); padding: 36px 28px; max-width: 640px; margin-left: auto; margin-right: auto;
+  }
+  .crew-total .big { font-family: var(--display); font-size: 72px; color: var(--warm); line-height: 1; display: block; }
+  .crew-total .tot-lbl { font-family: var(--cond); font-size: 13px; letter-spacing: 0.20em; text-transform: uppercase; color: var(--cream); margin-top: 10px; font-weight: 600; }
+  .crew-total p { font-size: 14px; color: rgba(240,236,228,0.62); margin-top: 14px; line-height: 1.6; }
+
+  /* ============================================================
+     CONTACT / FORM
+  ============================================================ */
+  .contact-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 72px; align-items: start; }
+  @media (max-width: 880px) { .contact-grid { grid-template-columns: 1fr; gap: 48px; } }
+  .contact-info h2 { font-family: var(--display); font-weight: 400; font-size: clamp(36px, 5vw, 58px); line-height: 0.96; color: var(--cream); margin-bottom: 22px; text-transform: uppercase; }
+  .contact-info h2 .gold { color: var(--warm); }
+  .contact-info p { font-size: 16px; color: rgba(240,236,228,0.76); margin-bottom: 28px; line-height: 1.7; }
+  .info-rows { display: flex; flex-direction: column; gap: 0; margin-bottom: 28px; }
+  .info-row {
+    display: flex; align-items: flex-start; gap: 16px; padding: 18px 0;
+    border-bottom: 1px solid rgba(197,160,90,0.14);
+  }
+  .info-row:first-child { border-top: 1px solid rgba(197,160,90,0.14); }
+  .info-ic {
+    width: 42px; height: 42px; flex-shrink: 0; border-radius: 8px;
+    background: rgba(192,58,42,0.12); border: 1px solid rgba(192,58,42,0.25);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .info-ic svg { width: 20px; height: 20px; stroke: var(--red-bright); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .info-lbl { font-family: var(--cond); font-size: 11px; font-weight: 600; letter-spacing: 0.18em; color: rgba(192,58,42,0.85); text-transform: uppercase; margin-bottom: 4px; }
+  .info-val { font-size: 15px; color: var(--cream); font-weight: 500; line-height: 1.5; }
+  .info-val a { color: var(--cream); text-decoration: underline; text-underline-offset: 3px; }
+  .info-val a:hover { color: var(--warm); }
+  .btn-call-big {
+    display: flex; flex-direction: column; align-items: center; text-align: center;
+    background: linear-gradient(180deg, var(--red-bright), var(--red));
+    color: var(--white); padding: 22px; border-radius: 8px; margin-top: 28px;
+    font-family: var(--cond); font-weight: 600; font-size: 28px; letter-spacing: 0.02em;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 10px 28px rgba(192,58,42,0.45);
+  }
+  .btn-call-big:hover { transform: translateY(-2px); box-shadow: 0 16px 36px rgba(192,58,42,0.55); }
+  .btn-call-big small { display: block; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.85); margin-bottom: 6px; }
+  .estimate-form {
+    background: var(--dark-3); border: 1px solid rgba(197,160,90,0.18);
+    border-radius: 10px; border-top: 4px solid var(--red); padding: 38px 34px;
+    box-shadow: var(--sh-card);
+  }
+  .estimate-form h3 { font-family: var(--display); font-size: 28px; color: var(--cream); margin-bottom: 8px; text-transform: uppercase; }
+  .estimate-form .form-sub { font-size: 15px; color: rgba(240,236,228,0.65); margin-bottom: 26px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+  .form-row.full { grid-template-columns: 1fr; }
+  @media (max-width: 580px) { .form-row { grid-template-columns: 1fr; } }
+  label { display: block; font-family: var(--cond); font-size: 12px; font-weight: 600; letter-spacing: 0.10em; text-transform: uppercase; color: var(--bone); margin-bottom: 7px; }
+  input, select, textarea {
+    width: 100%; padding: 13px 15px; background: var(--dark-4);
+    border: 1.5px solid rgba(197,160,90,0.18); border-radius: 5px;
+    font-family: var(--sans); font-size: 15px; color: var(--cream);
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  input::placeholder, textarea::placeholder { color: rgba(240,236,228,0.30); }
+  input:focus, select:focus, textarea:focus { outline: none; border-color: var(--red); box-shadow: 0 0 0 3px rgba(192,58,42,0.14); }
+  select { appearance: none; -webkit-appearance: none; cursor: pointer; }
+  textarea { resize: vertical; min-height: 100px; }
+  .form-submit {
+    width: 100%; background: linear-gradient(180deg, var(--dark-3), var(--dark)); color: var(--cream);
+    border: 1.5px solid rgba(197,160,90,0.30); padding: 17px;
+    border-radius: 5px; font-family: var(--cond); font-size: 17px; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer;
+    transition: border-color 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
+    margin-top: 6px;
+  }
+  .form-submit:hover { border-color: var(--warm); color: var(--warm); transform: translateY(-2px); box-shadow: 0 8px 22px rgba(0,0,0,0.3); }
+  .form-note { font-size: 12.5px; color: rgba(240,236,228,0.48); margin-top: 14px; text-align: center; line-height: 1.6; }
+
+  /* ============================================================
+     FINAL CTA
+  ============================================================ */
+  .final {
+    background:
+      radial-gradient(ellipse 60% 100% at 20% 0%, rgba(0,0,0,0.20), transparent 60%),
+      linear-gradient(160deg, var(--red-bright) 0%, var(--red-deep) 100%);
+    color: var(--white); text-align: center;
+    padding: 100px 0; position: relative; overflow: hidden;
+  }
+  .final::after {
+    content: ''; position: absolute; left: -10%; bottom: -40%; width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(197,160,90,0.22), transparent 65%); filter: blur(50px);
+  }
+  .final .container { position: relative; z-index: 2; }
+  .final h2 { font-family: var(--display); font-weight: 400; font-size: clamp(40px, 6vw, 72px); line-height: 0.96; margin-bottom: 18px; letter-spacing: 0.01em; text-transform: uppercase; }
+  .final p { font-size: 19px; color: rgba(255,255,255,0.92); margin-bottom: 36px; max-width: 640px; margin-left: auto; margin-right: auto; }
+  .final-actions { display: flex; gap: 22px; justify-content: center; flex-wrap: wrap; align-items: center; }
+  .btn-white {
+    background: var(--white); color: var(--red);
+    padding: 22px 48px; border-radius: 5px;
+    font-family: var(--cond); font-size: 26px; font-weight: 600; letter-spacing: 0.02em;
+    display: inline-flex; align-items: center; gap: 14px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 14px 40px rgba(0,0,0,0.3); text-transform: uppercase;
+  }
+  .btn-white:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 22px 50px rgba(0,0,0,0.4); }
+  .ph-pair { display: flex; flex-direction: column; align-items: flex-start; }
+  .ph-pair .ph-lbl { font-family: var(--cond); font-size: 10px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.68); margin-bottom: 2px; }
+  .ph-pair a { font-family: var(--display); font-size: 22px; color: var(--white); text-decoration: underline; text-underline-offset: 4px; text-decoration-color: rgba(255,255,255,0.38); }
+  .ph-pair a:hover { text-decoration-color: var(--white); }
+
+  /* ============================================================
+     FOOTER
+  ============================================================ */
+  footer { background: var(--dark); color: rgba(240,236,228,0.65); padding: 64px 0 32px; border-top: 3px solid var(--red); }
+  .foot-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 44px; margin-bottom: 44px; }
+  @media (max-width: 960px) { .foot-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
+  @media (max-width: 560px) { .foot-grid { grid-template-columns: 1fr; } }
+  .foot-brand { font-family: var(--display); font-size: 28px; color: var(--cream); letter-spacing: 0.02em; margin-bottom: 12px; text-transform: uppercase; line-height: 0.92; }
+  .foot-brand small { display: block; font-family: var(--cond); font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--warm); font-weight: 600; margin-top: 5px; }
+  footer p { font-size: 14px; margin-bottom: 6px; line-height: 1.7; }
+  footer h5 { font-family: var(--cond); font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--warm); margin-bottom: 16px; }
+  .foot-col a, .foot-col span { display: block; font-size: 14px; color: rgba(240,236,228,0.65); padding: 5px 0; transition: color 0.2s, padding-left 0.2s; }
+  .foot-col a:hover { color: var(--cream); padding-left: 5px; }
+  .foot-bottom { border-top: 1px solid rgba(240,236,228,0.12); padding-top: 24px; font-size: 12px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; line-height: 1.7; }
+  .foot-demo { color: rgba(240,236,228,0.38); font-size: 11px; }
+  .foot-demo a { color: var(--warm); text-decoration: underline; text-underline-offset: 2px; }
+  .foot-demo a:hover { color: var(--warm-lt); }
+
+  /* ============================================================
+     REDUCED MOTION GATE
+  ============================================================ */
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; scroll-behavior: auto !important; }
+    .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+    .scroll-hint .line { animation: none !important; }
   }
 </style>
 </head>
 <body>
 
-<!-- ===================== HEADER ===================== -->
-<header class="site-header" id="site-header">
-  <div class="container nav">
-    <a href="#" class="brand">
-      Dave's Auto Body Inc
-      <small>Green Bay, WI &middot; Since 1983</small>
-    </a>
-    <nav class="nav-links" aria-label="Main navigation">
-      <a href="#heritage">Our Story</a>
-      <a href="#services">Services</a>
-      <a href="#process">How It Works</a>
-      <a href="#crew">The Crew</a>
-      <a href="#contact">Contact</a>
+<!-- ============================================================
+     PERSISTENT CLICK-TO-CALL STRIP
+============================================================ -->
+<div class="cta-strip" id="ctaStrip">
+  <span>Dave's Auto Body Inc &middot; Green Bay Collision Repair</span>
+  <span class="pipe">|</span>
+  <a href="tel:9204982133">(920) 498-2133</a>
+  <span class="pipe">|</span>
+  <span>Tow Dispatch: <a href="tel:9203960772">(920) 396-0772</a></span>
+</div>
+
+<!-- ============================================================
+     HEADER
+============================================================ -->
+<header id="siteHeader">
+  <div class="container">
+    <nav class="nav">
+      <a href="#top" class="brand">Dave's Auto Body<small>Green Bay, WI &middot; Since 1983</small></a>
+      <div class="nav-links">
+        <a href="#story">Our Story</a>
+        <a href="#services">Services</a>
+        <a href="#process">How It Works</a>
+        <a href="#crew">The Crew</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="nav-right">
+        <a href="tel:9204982133" class="nav-call">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span class="full">Call (920) 498-2133</span><span class="short">Call Now</span>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
     </nav>
-    <a href="#contact" class="btn">Free Estimate</a>
   </div>
 </header>
 
-<!-- ===================== HERO ===================== -->
-<section class="hero" aria-label="Hero">
+<!-- Mobile menu -->
+<div class="mm-overlay" id="mmOverlay"></div>
+<nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+  <a href="#story">Our Story</a>
+  <a href="#services">Services</a>
+  <a href="#process">How It Works</a>
+  <a href="#crew">The Crew</a>
+  <a href="#contact">Contact</a>
+  <a href="tel:9204982133" class="mm-call">Call (920) 498-2133</a>
+</nav>
+
+<!-- ============================================================
+     HERO
+============================================================ -->
+<section class="hero" id="top">
+  <div class="hero-bg" role="img" aria-label="Dave's Auto Body shop exterior at 1748 W Paulson Road, Green Bay"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-streak"></div>
+  <div class="hero-watermark" aria-hidden="true">1983</div>
   <div class="container">
     <div class="hero-inner">
-      <div>
-        <div class="hero-eyebrow">1748 W Paulson Road, Green Bay, WI &middot; Founded 1983</div>
-        <h1>Green Bay's family collision shop, <em>daughter-led since 2018.</em></h1>
-        <p class="hero-sub">Dave Wierer opened this shop on West Paulson Road in 1983. His daughter Jessica Senn has owned and run it since 2018. The crew on the floor carries roughly 89 combined years of body-shop experience. Collision repair, paint, towing, and used-vehicle sales, one mile from Austin Straubel airport.</p>
-        <div class="hero-actions">
-          <a href="#contact" class="btn">Request a Free Estimate</a>
-          <div class="hero-phone">
-            Call us
-            <strong><a href="tel:9204982133" style="color:inherit;">(920) 498-2133</a></strong>
-          </div>
-        </div>
-        <div class="trust-chips">
-          <span class="chip">Founded 1983</span>
-          <span class="chip">Daughter-Led Since 2018</span>
-          <span class="chip">~89 Combined Years of Crew Tenure</span>
-          <span class="chip">Near GRB Airport</span>
-        </div>
+      <div class="eyebrow gold reveal">1748 W Paulson Rd &middot; Green Bay, Wisconsin</div>
+      <h1 class="reveal d1">Green Bay's family collision shop, <span class="accent">daughter-led since 2018.</span></h1>
+      <p class="hero-sub reveal d2">Dave Wierer opened this shop on West Paulson Road in 1983. His daughter Jessica Senn has owned and run it since 2018. The crew on the floor carries roughly 89 combined years of body-shop experience. Collision repair, paint, towing, and used-vehicle sales, one mile from Austin Straubel airport.</p>
+      <div class="hero-actions reveal d3">
+        <a href="tel:9204982133" class="btn-hero">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (920) 498-2133
+        </a>
+        <a href="#contact" class="btn-ghost-hero">Free Estimate</a>
       </div>
-      <div class="hero-card reveal">
-        <div class="hero-card-label">A Family Collision Shop</div>
-        <h3>Two generations. One address. 42 years on Paulson Road.</h3>
-        <div class="hero-card-divider"></div>
-        <div class="stat-row">
-          <span class="num">42</span>
-          <div class="lbl"><strong>Years at the same address</strong>Founded 1983 by Dave Wierer. Same building, same family ever since.</div>
-        </div>
-        <div class="stat-row">
-          <span class="num">2nd</span>
-          <div class="lbl"><strong>Generation, daughter-led</strong>Jessica Senn took over as owner and president in 2018 when her father Dave handed off the shop.</div>
-        </div>
-        <div class="stat-row">
-          <span class="num">~89</span>
-          <div class="lbl"><strong>Combined years of crew tenure</strong>Four technicians at 28, 26, 23, and 12 years on the bay, all under one roof.</div>
-        </div>
+      <div class="hero-chips reveal d4">
+        <span class="chip">Founded 1983</span>
+        <span class="chip">Daughter-Led Since 2018</span>
+        <span class="chip">89 Combined Crew Years</span>
+        <span class="chip">Near GRB Airport</span>
       </div>
     </div>
   </div>
+  <div class="scroll-hint"><span>Scroll</span><span class="line"></span></div>
 </section>
 
-<!-- ===================== TRUST BAND ===================== -->
-<div class="trust-band">
+<!-- ============================================================
+     STATS BAND
+============================================================ -->
+<div class="stats-band">
   <div class="container">
-    <div class="trust-grid">
-      <div class="trust-item reveal">
-        <span class="big">1983</span>
-        <div class="lbl">Year Founded</div>
+    <div class="stats-grid">
+      <div class="stat-cell">
+        <div class="stat-num"><span data-count="1983">1983</span></div>
+        <div class="stat-lbl">Year Founded</div>
       </div>
-      <div class="trust-item reveal reveal-delay-1">
-        <span class="big">42<em>+</em></span>
-        <div class="lbl">Years on Paulson Road</div>
+      <div class="stat-cell">
+        <div class="stat-num"><span data-count="42">42</span><span class="sm">+</span></div>
+        <div class="stat-lbl">Years on Paulson Road</div>
       </div>
-      <div class="trust-item reveal reveal-delay-2">
-        <span class="big">2<em>nd</em></span>
-        <div class="lbl">Generation, Daughter-Led</div>
+      <div class="stat-cell">
+        <div class="stat-num">2<span class="sm">nd</span></div>
+        <div class="stat-lbl">Generation, Daughter-Led</div>
       </div>
-      <div class="trust-item reveal reveal-delay-3">
-        <span class="big">~89</span>
-        <div class="lbl">Combined Crew Years</div>
+      <div class="stat-cell">
+        <div class="stat-num">~<span data-count="89">89</span></div>
+        <div class="stat-lbl">Combined Crew Years</div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ===================== HERITAGE ===================== -->
-<section id="heritage" class="heritage">
+<!-- ============================================================
+     GALLERY STRIP (real photos)
+============================================================ -->
+<div class="gallery-strip" aria-label="Shop and work photos">
+  <div class="gallery-rail">
+    <!-- Main: shop exterior photo -->
+    <div class="gallery-cell main">
+      <img
+        src="https://stauditcentralusaa01prod.blob.core.windows.net/files/Accounts/1/Locations/f6ada406-3e7e-4ab0-8ce9-c665cafebe11/SliderImage/fcc3a2b8-1117-414a-b860-71cb7917c6db.jpg"
+        alt="Dave's Auto Body shop, 1748 W Paulson Road, Green Bay"
+        loading="lazy"
+      >
+      <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(13,15,18,0.75) 0%,transparent 50%);pointer-events:none;"></div>
+    </div>
+    <!-- Secondary shop/work images -->
+    <div class="gallery-cell">
+      <img
+        src="https://stauditcentralusaa01prod.blob.core.windows.net/files/Accounts/1/Locations/f6ada406-3e7e-4ab0-8ce9-c665cafebe11/SliderImage/baf6c18d-dbec-4ccb-b10a-2e4c8180ae35.jpg"
+        alt="Body work in progress at Dave's Auto Body"
+        loading="lazy"
+      >
+    </div>
+    <div class="gallery-cell">
+      <img
+        src="https://stauditcentralusaa01prod.blob.core.windows.net/files/Accounts/1/Locations/f6ada406-3e7e-4ab0-8ce9-c665cafebe11/SliderImage/5be1d011-85e2-4f64-a2c6-75a77584b9d8.jpg"
+        alt="Collision repair at Dave's Auto Body Green Bay"
+        loading="lazy"
+      >
+    </div>
+    <div class="gallery-cell">
+      <img
+        src="https://stauditcentralusaa01prod.blob.core.windows.net/files/Accounts/1/Locations/f6ada406-3e7e-4ab0-8ce9-c665cafebe11/SliderImage/42576962-384c-43cb-841d-003baf83c766.jpg"
+        alt="Completed auto body work at Dave's Auto Body"
+        loading="lazy"
+      >
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     SERVICES
+============================================================ -->
+<section class="dark-bg" id="services">
   <div class="container">
-    <div class="heritage-grid">
-      <div class="heritage-visual reveal">
-        <div class="yr-label">Founded</div>
-        <div class="yr">1983</div>
-        <p class="yr-quote">"Honesty is the best way to gain the trust of customers."</p>
+    <div class="eyebrow reveal">What We Do</div>
+    <h2 class="section-title on-dark reveal d1">Collision. Paint. Frame. <span class="accent">Towing.</span></h2>
+    <p class="section-sub on-dark reveal d2">Dave's Auto Body runs every service out of the same address on West Paulson Road it has occupied since 1983. One family, one building, one standard.</p>
+    <div class="services-grid">
+
+      <div class="svc-card flagship reveal">
+        <div class="svc-icon">
+          <svg viewBox="0 0 48 48"><rect x="4" y="20" width="40" height="16" rx="3"/><path d="M8 20L14 10h20l6 10"/><circle cx="14" cy="36" r="4"/><circle cx="34" cy="36" r="4"/><path d="M4 28h2M42 28h2" stroke-linecap="round"/></svg>
+        </div>
+        <span class="svc-tag">Core Service</span>
+        <h3>Collision Repair</h3>
+        <p>Full-service collision repair from a parking-lot crunch to major impact. The shop has handled Green Bay collision work since 1983, with the same technicians who know every quirk of Wisconsin winters and Paulson Road.</p>
+        <div class="svc-detail">Structural, body panels, bumpers, fenders, doors</div>
       </div>
-      <div class="heritage-content reveal reveal-delay-1">
-        <div class="section-eyebrow">Our Story</div>
-        <h2>Dave Wierer opened the doors in 1983. <em>His daughter Jessica runs it today.</em></h2>
-        <p>Dave Wierer founded Dave's Auto Body Inc at 1748 West Paulson Road in Green Bay in 1983. He worked that bay for 35 years. In 2018, his daughter Jessica Senn took over as owner and president, and the shop kept its name, its address, and the same crew on the floor.</p>
-        <p>Forty-two years later, the shop is still on Paulson Road. The phone numbers still route to the same building. Most of the technicians on the floor have been there longer than most national chains have had a Green Bay location. A customer who had a fender repaired here in 2008 can bring a teenager's first car back in 2026 and recognize the names on the work order.</p>
-        <div class="pull-quote">"The same address since 1983. The same family. A daughter-led second generation, and a crew with roughly 89 combined years on the bay."</div>
-        <p>The shop runs collision repair, refinishing, towing, and used-vehicle sales out of one Paulson Road building. The tagline on the wall: "honesty is the best way to gain the trust of customers."</p>
+
+      <div class="svc-card reveal d1">
+        <div class="svc-icon">
+          <svg viewBox="0 0 48 48"><path d="M12 24c0-6.627 5.373-12 12-12s12 5.373 12 12"/><path d="M12 24c0 6.627 5.373 12 12 12"/><path d="M24 12v4M24 32v4M12 24h4M32 24h4"/><circle cx="24" cy="24" r="4"/></svg>
+        </div>
+        <span class="svc-tag">Paint</span>
+        <h3>Paint and Refinishing</h3>
+        <p>Color-matched refinishing and full repaints. The shop's paint technician carries 23 years of refinish work on Green Bay vehicles, matching every manufacturer color including custom and two-tone finishes.</p>
+        <div class="svc-detail">Color match, full respray, spot repair, clearcoat</div>
       </div>
+
+      <div class="svc-card reveal d2">
+        <div class="svc-icon">
+          <svg viewBox="0 0 48 48"><rect x="6" y="14" width="36" height="22" rx="3"/><path d="M14 14V10M34 14V10"/><path d="M20 26l4 4 8-8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <span class="svc-tag">Frame</span>
+        <h3>Frame Straightening</h3>
+        <p>Frame and structural straightening after moderate to severe impact. Equipment brings a vehicle back to manufacturer tolerances before any body or paint work begins. Unibody and full-frame vehicles.</p>
+        <div class="svc-detail">Structural alignment, unibody, full-frame vehicles</div>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="svc-icon">
+          <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="16"/><path d="M24 16v8l6 4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="24" r="3" fill="currentColor" stroke="none"/></svg>
+        </div>
+        <span class="svc-tag">Paintless</span>
+        <h3>Paintless Dent Repair</h3>
+        <p>Minor dents and dings without repainting. Hail damage, door dings, and small panel impressions addressed through paintless dent repair, keeping the factory finish intact and the cost down.</p>
+        <div class="svc-detail">Hail damage, door dings, minor panel dents</div>
+      </div>
+
+      <div class="svc-card reveal d1">
+        <div class="svc-icon">
+          <svg viewBox="0 0 48 48"><rect x="4" y="22" width="26" height="14" rx="3"/><path d="M30 22h6l6 6v6h-6"/><circle cx="12" cy="36" r="4"/><circle cx="36" cy="36" r="4"/><path d="M30 29h-4V18l8 4" stroke-linejoin="round"/></svg>
+        </div>
+        <span class="svc-tag">Towing</span>
+        <h3>Towing Dispatch</h3>
+        <p>Towing for vehicles that are not drivable after an accident or breakdown in the Green Bay metro. The tow line routes to dispatch directly. If the vehicle cannot be driven, this is the number to call first.</p>
+        <div class="svc-detail">Tow dispatch: <a href="tel:9203960772" style="color:var(--red-bright);">(920) 396-0772</a></div>
+      </div>
+
+      <div class="svc-card reveal d2">
+        <div class="svc-icon">
+          <svg viewBox="0 0 48 48"><path d="M8 32V20l6-8h20l6 8v12"/><circle cx="16" cy="34" r="4"/><circle cx="32" cy="34" r="4"/><path d="M4 32h40M14 20h20"/></svg>
+        </div>
+        <span class="svc-tag">Used Vehicles</span>
+        <h3>Used Vehicle Sales</h3>
+        <p>Used vehicles available off the Packerland Drive lot near Austin Straubel airport. The shop has sold used vehicles alongside its collision and body work for years. Call the shop line to ask about current inventory.</p>
+        <div class="svc-detail">Inventory varies, near GRB airport</div>
+      </div>
+
     </div>
   </div>
 </section>
 
-<!-- ===================== SUCCESSION ===================== -->
-<section id="succession" class="succession">
+<!-- ============================================================
+     STORY (Heritage)
+============================================================ -->
+<section class="mid-bg" id="story">
   <div class="container">
-    <div class="succession-grid">
-      <div class="succession-visual reveal">
-        <div class="vis-label">Daughter-Led Since 2018</div>
-        <div class="vis-headline">Dave to Jessica. Father to daughter. 1983 to today.</div>
-        <p class="vis-sub">A second-generation family handover the collision category almost never produces.</p>
+    <div class="story-grid">
+      <div class="story-visual reveal">
+        <img
+          src="https://stauditcentralusaa01prod.blob.core.windows.net/files/Accounts/1/Locations/f6ada406-3e7e-4ab0-8ce9-c665cafebe11/SliderImage/8e4a3f9f-7f65-4a42-a603-9bfbfdce1b2a.jpg"
+          alt="Dave's Auto Body exterior, 1748 W Paulson Road, Green Bay, Wisconsin"
+          loading="lazy"
+        >
+        <div class="vis-overlay"></div>
+        <div class="vis-badge">
+          <div class="vis-badge-yr">1983</div>
+          <div class="vis-badge-lbl">Founded by Dave Wierer &middot; Same address today</div>
+        </div>
       </div>
-      <div class="succession-content reveal reveal-delay-1">
-        <div class="section-eyebrow">The Succession Story</div>
-        <h2>A family handover most shops <em>never manage to make.</em></h2>
-        <p>Most collision shops in the metro are either regional chains, MSO rollups, or one-owner operations that close when the founder retires. Dave's Auto Body is the rare third path. Dave Wierer founded it in 1983. His daughter Jessica Senn took over as owner and president in 2018. The shop did not change hands to a chain. It moved from generation one to generation two inside the same family.</p>
-        <ul class="timeline-list">
+      <div class="story-content reveal d1">
+        <div class="eyebrow gold">Our Story</div>
+        <h2>Dave opened the doors. <span class="accent">Jessica runs it today.</span></h2>
+        <p>Dave Wierer founded Dave's Auto Body Inc at 1748 West Paulson Road in Green Bay in 1983. He worked that bay for 35 years. In 2018, his daughter Jessica Senn took over as owner and president, and the shop kept its name, its address, and the same crew on the floor.</p>
+        <p>Forty-two years later, the shop is still on Paulson Road. Most of the technicians have been there longer than most national chains have had a Green Bay location. A customer who had a fender repaired here in 2008 can bring a teenager's first car back in 2026 and recognize the names on the work order.</p>
+        <div class="story-pull">"Two generations. One address. 42 years on Paulson Road, family-owned the entire time."</div>
+        <ul class="timeline">
           <li><strong>1983:</strong> Dave Wierer founds Dave's Auto Body Inc at 1748 W Paulson Rd, Green Bay</li>
           <li><strong>35 years:</strong> Dave runs the shop from founding through 2018</li>
           <li><strong>2018:</strong> Jessica Senn, Dave's daughter, takes over as owner and president</li>
           <li><strong>Today:</strong> 2nd-generation, daughter-led, same original Paulson Road address</li>
           <li><strong>The crew:</strong> Technicians at 28, 26, 23, and 12 years on the bay, roughly 89 combined years</li>
-          <li><strong>The standard:</strong> "Honesty is the best way to gain the trust of customers"</li>
+          <li><strong>The standard:</strong> Honesty is the best way to gain the trust of customers</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===================== SERVICES ===================== -->
-<section id="services" class="services">
+<!-- ============================================================
+     PROCESS
+============================================================ -->
+<section class="dark-bg" id="process">
   <div class="container">
-    <div class="section-header center reveal">
-      <div class="section-eyebrow">What We Do</div>
-      <h2 class="section-title">Collision, paint, towing, and used vehicles. <em>All from one Paulson Road bay.</em></h2>
-      <p class="section-sub">Dave's Auto Body runs every service out of the same address on West Paulson Road it has occupied since 1983.</p>
-    </div>
-
-    <div class="services-grid">
-      <div class="service-card primary reveal">
-        <div class="service-tag">Core Service</div>
-        <svg class="service-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-          <rect x="4" y="20" width="40" height="16" rx="3" stroke="currentColor" stroke-width="2.5"/>
-          <path d="M8 20L14 10h20l6 10" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
-          <circle cx="14" cy="36" r="4" stroke="currentColor" stroke-width="2.5"/>
-          <circle cx="34" cy="36" r="4" stroke="currentColor" stroke-width="2.5"/>
-          <path d="M4 28h2M42 28h2" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-        </svg>
-        <h3>Collision Repair</h3>
-        <p>Full-service collision repair for everything from a parking-lot crunch to a significant impact. The shop has handled Green Bay collision work since 1983, with the same technicians who know every quirk of Wisconsin winters and Green Bay roads.</p>
-        <div class="service-detail">Structural, body panels, bumpers, fenders, doors</div>
-      </div>
-
-      <div class="service-card reveal reveal-delay-1">
-        <div class="service-tag">Paint</div>
-        <svg class="service-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-          <path d="M16 8h16M12 16h24M8 24h32M12 32h24M16 40h16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-          <circle cx="36" cy="12" r="6" stroke="currentColor" stroke-width="2.5"/>
-          <path d="M36 18v10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-        </svg>
-        <h3>Paint and Refinishing</h3>
-        <p>Color-matched refinishing and full repaints. The shop's paint technician carries 23 years of refinish work on Green Bay vehicles, matching every manufacturer color, including custom and two-tone finishes.</p>
-        <div class="service-detail">Color match, full respray, spot repair, clearcoat</div>
-      </div>
-
-      <div class="service-card reveal reveal-delay-2">
-        <div class="service-tag">Body Repair</div>
-        <svg class="service-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-          <rect x="6" y="14" width="36" height="22" rx="3" stroke="currentColor" stroke-width="2.5"/>
-          <path d="M14 14V10M34 14V10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-          <path d="M20 26l4 4 8-8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <h3>Frame Straightening</h3>
-        <p>Frame and structural straightening after moderate to severe impact. The shop uses frame-straightening equipment to bring a vehicle back to manufacturer tolerances before any body or paint work begins.</p>
-        <div class="service-detail">Structural alignment, unibody, full-frame vehicles</div>
-      </div>
-
-      <div class="service-card reveal">
-        <div class="service-tag">Paintless</div>
-        <svg class="service-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-          <circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="2.5"/>
-          <path d="M24 16v8l6 4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <circle cx="24" cy="24" r="3" fill="currentColor"/>
-        </svg>
-        <h3>Paintless Dent Repair</h3>
-        <p>Minor dents and dings without repainting. Hail damage, door dings, and small panel impressions can often be addressed through paintless dent repair, keeping the factory finish intact and the cost down.</p>
-        <div class="service-detail">Hail damage, door dings, minor panel dents</div>
-      </div>
-
-      <div class="service-card reveal reveal-delay-1">
-        <div class="service-tag">Towing</div>
-        <svg class="service-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-          <rect x="4" y="22" width="26" height="14" rx="3" stroke="currentColor" stroke-width="2.5"/>
-          <path d="M30 22h6l6 6v6h-6" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
-          <circle cx="12" cy="36" r="4" stroke="currentColor" stroke-width="2.5"/>
-          <circle cx="36" cy="36" r="4" stroke="currentColor" stroke-width="2.5"/>
-          <path d="M30 29h-4V18l8 4" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
-        </svg>
-        <h3>Towing</h3>
-        <p>Towing dispatch for vehicles that are not drivable after an accident or breakdown in the Green Bay metro. The tow line routes to dispatch directly. If the vehicle is not drivable, this is the right number to call first.</p>
-        <div class="service-detail">Tow dispatch line: <a href="tel:9203960772" style="color:var(--rust);">(920) 396-0772</a></div>
-      </div>
-
-      <div class="service-card reveal reveal-delay-2">
-        <div class="service-tag">Used Vehicles</div>
-        <svg class="service-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-          <path d="M8 32V20l6-8h20l6 8v12" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
-          <circle cx="16" cy="34" r="4" stroke="currentColor" stroke-width="2.5"/>
-          <circle cx="32" cy="34" r="4" stroke="currentColor" stroke-width="2.5"/>
-          <path d="M4 32h40M14 20h20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-        </svg>
-        <h3>Used Vehicle Sales</h3>
-        <p>Used vehicles available off the Packerland Drive lot, near Austin Straubel airport. The shop has sold used vehicles alongside its collision and body work for years. Call the shop line to ask about current inventory.</p>
-        <div class="service-detail">Inventory varies, near GRB airport on Packerland Drive</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== PROCESS ===================== -->
-<section id="process" class="process">
-  <div class="container">
-    <div class="section-header center reveal">
-      <div class="section-eyebrow">How It Works</div>
-      <h2 class="section-title">Bringing your vehicle in <em>is straightforward.</em></h2>
-      <p class="section-sub">Four steps from the first call to picking up a repaired vehicle. The shop walks you through each one.</p>
-    </div>
-
-    <div class="process-steps">
-      <div class="process-step reveal">
-        <div class="step-number">1</div>
+    <div class="eyebrow reveal">How It Works</div>
+    <h2 class="section-title on-dark reveal d1">From the first call to <span class="accent">picking up your vehicle.</span></h2>
+    <p class="section-sub on-dark reveal d2">Four steps. The shop walks you through each one.</p>
+    <div class="process-grid">
+      <div class="step-card reveal">
+        <div class="step-num">1</div>
         <h4>Call the right line</h4>
-        <p>Shop line at <a href="tel:9204982133" style="color:var(--rust);">(920) 498-2133</a> for collision, paint, body work, and used-vehicle questions. Tow line at <a href="tel:9203960772" style="color:var(--rust);">(920) 396-0772</a> for dispatch if the vehicle is not drivable.</p>
+        <p>Shop line at <a href="tel:9204982133">(920) 498-2133</a> for collision, paint, body work, and used-vehicle questions. Tow line at <a href="tel:9203960772">(920) 396-0772</a> if the vehicle is not drivable.</p>
       </div>
-      <div class="process-step reveal reveal-delay-1">
-        <div class="step-number">2</div>
+      <div class="step-card reveal d1">
+        <div class="step-num">2</div>
         <h4>Insurance or out-of-pocket</h4>
-        <p>Let the shop know whether you are going through an insurance carrier or paying out of pocket. The estimate process, timeline, and paperwork differ for each. The shop routes accordingly and explains both paths clearly.</p>
+        <p>Let the shop know whether you are going through an insurance carrier or paying out of pocket. The estimate process differs for each. The shop routes accordingly and explains both paths clearly.</p>
       </div>
-      <div class="process-step reveal reveal-delay-2">
-        <div class="step-number">3</div>
+      <div class="step-card reveal d2">
+        <div class="step-num">3</div>
         <h4>An honest estimate</h4>
-        <p>The shop writes the estimate, walks you through the work, and explains what is happening at each stage. "Honesty is the best way to gain the trust of customers" is on the wall for a reason. No surprises on the final invoice.</p>
+        <p>The shop writes the estimate, walks you through the work, and explains what is happening at each stage. Honesty is the best way to gain the trust of customers. No surprises on the final invoice.</p>
       </div>
-      <div class="process-step reveal reveal-delay-3">
-        <div class="step-number">4</div>
+      <div class="step-card reveal d3">
+        <div class="step-num">4</div>
         <h4>Pick up your vehicle</h4>
-        <p>When the work is complete, the shop calls you. A technician walks through what was done before you drive off. If anything is not right, say so. The goal is a repair you are satisfied with, not just a closed work order.</p>
+        <p>When the work is complete, the shop calls you. A technician walks through what was done. If anything is not right, say so. The goal is a repair you are satisfied with, a closed work order that holds up.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===================== CREW ===================== -->
-<section id="crew" class="crew">
+<!-- ============================================================
+     CREW
+============================================================ -->
+<section class="mid-bg" id="crew">
   <div class="container">
-    <div class="section-header center reveal">
-      <div class="section-eyebrow">The Crew on the Bay</div>
-      <h2 class="section-title">Roughly 89 combined years of body-shop tenure. <em>Under one roof.</em></h2>
-      <p class="section-sub">Four technicians at 28, 26, 23, and 12 years respectively. That kind of continuity is something no regional chain or MSO can manufacture.</p>
-    </div>
-
+    <div class="eyebrow reveal">The Crew on the Bay</div>
+    <h2 class="section-title on-dark reveal d1">Roughly 89 combined years of tenure. <span class="accent">Under one roof.</span></h2>
+    <p class="section-sub on-dark reveal d2">Four technicians at 28, 26, 23, and 12 years respectively. That kind of continuity is something no regional chain or rollup can manufacture.</p>
     <div class="crew-grid">
       <div class="crew-card reveal">
-        <div class="crew-banner c1">
-          <div class="tenure-label">Senior Technician</div>
-          <div class="tenure-years">28</div>
-          <div class="tenure-unit">Years on the bay</div>
+        <div class="crew-banner cb1">
+          <div class="ten-lbl">Senior Technician</div>
+          <div class="ten-num" data-count="28">28</div>
+          <div class="ten-unit">Years on the bay</div>
         </div>
         <div class="crew-body">
           <div class="crew-role">Lead Body Technician</div>
-          <h3>Twenty-eight years on this bay.</h3>
-          <p>The senior body technician has been with the shop since before most of Green Bay's current chain locations existed. A full career spent on West Paulson Road.</p>
+          <h3>28 years on this bay.</h3>
+          <p>The senior body technician has been with the shop since before most of Green Bay's current chain locations existed.</p>
         </div>
       </div>
-
-      <div class="crew-card reveal reveal-delay-1">
-        <div class="crew-banner c2">
-          <div class="tenure-label">Body Technician</div>
-          <div class="tenure-years">26</div>
-          <div class="tenure-unit">Years on the bay</div>
+      <div class="crew-card reveal d1">
+        <div class="crew-banner cb2">
+          <div class="ten-lbl">Body Technician</div>
+          <div class="ten-num" data-count="26">26</div>
+          <div class="ten-unit">Years on the bay</div>
         </div>
         <div class="crew-body">
           <div class="crew-role">Body and Frame</div>
-          <h3>Twenty-six years of collision work.</h3>
+          <h3>26 years of collision work.</h3>
           <p>More than two decades of body and frame repair under the same roof, on Green Bay roads and Green Bay vehicles.</p>
         </div>
       </div>
-
-      <div class="crew-card reveal reveal-delay-2">
-        <div class="crew-banner c3">
-          <div class="tenure-label">Refinish Technician</div>
-          <div class="tenure-years">23</div>
-          <div class="tenure-unit">Years on the bay</div>
+      <div class="crew-card reveal d2">
+        <div class="crew-banner cb3">
+          <div class="ten-lbl">Refinish Technician</div>
+          <div class="ten-num" data-count="23">23</div>
+          <div class="ten-unit">Years on the bay</div>
         </div>
         <div class="crew-body">
           <div class="crew-role">Paint and Refinish</div>
-          <h3>Twenty-three years of paint work.</h3>
-          <p>Over two decades of color-match refinishing from the same painter, in the same shop. A level of consistency no rotation-based chain can offer.</p>
+          <h3>23 years of paint work.</h3>
+          <p>Over two decades of color-match refinishing from the same painter, in the same shop. Consistency no rotation chain can offer.</p>
         </div>
       </div>
-
-      <div class="crew-card reveal reveal-delay-3">
-        <div class="crew-banner c4">
-          <div class="tenure-label">Body Technician</div>
-          <div class="tenure-years">12</div>
-          <div class="tenure-unit">Years on the bay</div>
+      <div class="crew-card reveal d3">
+        <div class="crew-banner cb4">
+          <div class="ten-lbl">Body Technician</div>
+          <div class="ten-num" data-count="12">12</div>
+          <div class="ten-unit">Years on the bay</div>
         </div>
         <div class="crew-body">
           <div class="crew-role">Body Repair</div>
-          <h3>Twelve years, apprentice to journeyman.</h3>
-          <p>A full career arc built inside the same shop, under the same family ownership. Learned the trade on these bays and stayed.</p>
+          <h3>12 years, apprentice to journeyman.</h3>
+          <p>A full career arc built inside the same shop, under the same family ownership. Learned the trade here and stayed.</p>
         </div>
       </div>
     </div>
-
     <div class="crew-total reveal">
       <span class="big">~89</span>
-      <div class="total-lbl">Combined Years of Body-Shop Tenure</div>
-      <p>Per the shop's own heritage record. Four technicians, one address, one family. That is what 42 years of consistent ownership produces.</p>
+      <div class="tot-lbl">Combined Years of Body-Shop Tenure</div>
+      <p>Four technicians, one address, one family. That is what 42 years of consistent ownership produces.</p>
     </div>
   </div>
 </section>
 
-<!-- ===================== INSURANCE ===================== -->
-<section id="insurance" class="insurance">
+<!-- ============================================================
+     INSURANCE
+============================================================ -->
+<section class="dark-bg" id="insurance">
   <div class="container">
-    <div class="insurance-grid">
-      <div class="insurance-content reveal">
-        <div class="section-eyebrow">Insurance and Direct Pay</div>
-        <h2>Working with insurance <em>or paying directly: here is what to know.</em></h2>
-        <p>Dave's Auto Body works with drivers coming in on insurance claims and with drivers paying out of pocket. The process differs, and the shop is straightforward about both paths from the first call.</p>
-        <p>If you have an insurance claim, bring the claim number and your adjuster's contact information. The shop works through the repair process with the carrier. If you are paying directly, the estimate is written at the shop and the cost is explained before any work begins.</p>
+    <div class="ins-grid">
+      <div class="reveal">
+        <div class="eyebrow gold">Insurance and Direct Pay</div>
+        <h2 class="ins-content">
+          <div style="font-family:var(--display);font-weight:400;font-size:clamp(36px,5vw,58px);line-height:0.96;color:var(--cream);margin-bottom:22px;text-transform:uppercase;">Working with insurance or <span class="gold" style="color:var(--warm);">paying directly.</span></div>
+        </h2>
+        <p style="font-size:16px;color:rgba(240,236,228,0.78);margin-bottom:16px;line-height:1.7;">Dave's Auto Body works with drivers coming in on insurance claims and with drivers paying out of pocket. The process differs, and the shop is straightforward about both paths from the first call.</p>
+        <p style="font-size:16px;color:rgba(240,236,228,0.78);margin-bottom:16px;line-height:1.7;">If you have an insurance claim, bring the claim number and your adjuster's contact information. If you are paying directly, the estimate is written at the shop and the cost is explained before any work begins.</p>
         <ul class="check-list">
           <li><strong>Insurance claims:</strong> Bring your claim number. The shop coordinates with the adjuster on your behalf.</li>
           <li><strong>Direct pay:</strong> A written estimate before work starts. No surprise additions without your approval.</li>
-          <li><strong>Towing:</strong> If the vehicle is not drivable, call <a href="tel:9203960772" style="color:var(--rust);">(920) 396-0772</a> first. The tow line routes directly to dispatch.</li>
-          <li><strong>Timeline:</strong> The shop gives a repair timeline at the estimate stage. It tells you if that changes.</li>
-          <li><strong>The standard:</strong> "Honesty is the best way to gain the trust of customers." That applies to the invoice as much as the repair.</li>
+          <li><strong>Towing:</strong> If the vehicle is not drivable, call (920) 396-0772 first. Routes directly to dispatch.</li>
+          <li><strong>Timeline:</strong> The shop gives a repair timeline at the estimate stage and tells you if that changes.</li>
+          <li><strong>The standard:</strong> Honesty is the best way to gain the trust of customers. That applies to the invoice.</li>
         </ul>
       </div>
-      <div class="insurance-card reveal reveal-delay-1">
+      <div class="ins-card reveal d1">
         <div class="card-tag">What to Bring</div>
-        <h3>Before you come in, have these ready.</h3>
-        <div class="divider"></div>
-        <p><strong>Insurance claim:</strong> Your claim number, adjuster name and phone, insurance card, and vehicle registration. The shop takes it from there.</p>
-        <br>
-        <p><strong>Out-of-pocket repair:</strong> The vehicle and a description of what happened. The shop writes the estimate on site. No paperwork required in advance.</p>
-        <br>
-        <p><strong>Towing first:</strong> If the vehicle is not drivable, do not bring it, call it in. The tow line at (920) 396-0772 dispatches from the same Paulson Road location.</p>
+        <h3 style="font-family:var(--display);font-size:28px;color:var(--cream);margin-bottom:16px;text-transform:uppercase;">Before you come in.</h3>
+        <div class="ins-card .divider" style="width:52px;height:2px;background:var(--warm);margin:0 0 22px;"></div>
+        <p><strong style="color:var(--cream);">Insurance claim:</strong> Your claim number, adjuster name and phone, insurance card, and vehicle registration. The shop takes it from there.</p>
+        <p><strong style="color:var(--cream);">Out-of-pocket repair:</strong> The vehicle and a description of what happened. The shop writes the estimate on site. No paperwork required in advance.</p>
+        <p><strong style="color:var(--cream);">Towing first:</strong> If the vehicle is not drivable, call (920) 396-0772. Do not drive it in. The tow line dispatches from the same Paulson Road location.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===================== AREAS ===================== -->
-<section id="areas" class="areas">
-  <div class="container">
-    <div class="section-header center reveal">
-      <div class="section-eyebrow">Service Area</div>
-      <h2 class="section-title">On Paulson Road in Green Bay, <em>one mile from Austin Straubel airport.</em></h2>
-      <p class="section-sub">Dave's Auto Body is at 1748 West Paulson Road off Packerland Drive, roughly one to two miles from GRB. Customers come in from across the west side of the metro and the broader Brown County corridor.</p>
-    </div>
-
-    <div class="areas-grid">
-      <div class="area-pill reveal"><div class="city-name">Green Bay</div><div class="dist">Our home</div></div>
-      <div class="area-pill reveal reveal-delay-1"><div class="city-name">GRB Airport</div><div class="dist">1-2 miles</div></div>
-      <div class="area-pill reveal reveal-delay-2"><div class="city-name">Ashwaubenon</div><div class="dist">~4 miles</div></div>
-      <div class="area-pill reveal reveal-delay-3"><div class="city-name">Howard</div><div class="dist">~5 miles</div></div>
-      <div class="area-pill reveal"><div class="city-name">Suamico</div><div class="dist">~8 miles</div></div>
-      <div class="area-pill reveal reveal-delay-1"><div class="city-name">Hobart</div><div class="dist">~6 miles</div></div>
-      <div class="area-pill reveal reveal-delay-2"><div class="city-name">De Pere</div><div class="dist">~7 miles</div></div>
-      <div class="area-pill reveal reveal-delay-3"><div class="city-name">Pulaski</div><div class="dist">~14 miles</div></div>
-    </div>
-
-    <p class="areas-note reveal">Not on this list? If you are looking for a family-owned collision shop in the west-Green-Bay corridor, call the shop line at (920) 498-2133.</p>
-  </div>
-</section>
-
-<!-- ===================== REVIEWS ===================== -->
-<section id="reviews" class="reviews">
-  <div class="container">
-    <div class="section-header center reveal">
-      <div class="section-eyebrow">What Customers Say</div>
-      <h2 class="section-title">42 years of Green Bay drivers <em>bringing their vehicles back.</em></h2>
-      <p class="section-sub">The real proof of a family collision shop is the customers who return. Dave's Auto Body has been earning that for 42 years.</p>
-    </div>
-
-    <div class="reviews-grid">
-      <div class="review-card reveal">
-        <div class="review-stars" aria-label="5 stars">
-          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.7 5.5L19 7.6l-4.5 4.4 1.1 6.2L10 15.4l-5.6 2.8 1.1-6.2L1 7.6l6.3-.9z"/></svg>
-          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.7 5.5L19 7.6l-4.5 4.4 1.1 6.2L10 15.4l-5.6 2.8 1.1-6.2L1 7.6l6.3-.9z"/></svg>
-          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.7 5.5L19 7.6l-4.5 4.4 1.1 6.2L10 15.4l-5.6 2.8 1.1-6.2L1 7.6l6.3-.9z"/></svg>
-          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.7 5.5L19 7.6l-4.5 4.4 1.1 6.2L10 15.4l-5.6 2.8 1.1-6.2L1 7.6l6.3-.9z"/></svg>
-          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.7 5.5L19 7.6l-4.5 4.4 1.1 6.2L10 15.4l-5.6 2.8 1.1-6.2L1 7.6l6.3-.9z"/></svg>
-        </div>
-        <blockquote>"Been coming here for years. The work is good and they tell you exactly what is going on with your vehicle. Family shop, and you can tell."</blockquote>
-        <div class="review-attr">Google review, Green Bay customer</div>
-      </div>
-
-      <div class="review-card reveal reveal-delay-1">
-        <div class="review-stars" aria-label="5 stars">
-          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.7 5.5L19 7.6l-4.5 4.4 1.1 6.2L10 15.4l-5.6 2.8 1.1-6.2L1 7.6l6.3-.9z"/></svg>
-          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.7 5.5L19 7.6l-4.5 4.4 1.1 6.2L10 15.4l-5.6 2.8 1.1-6.2L1 7.6l6.3-.9z"/></svg>
-          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.7 5.5L19 7.6l-4.5 4.4 1.1 6.2L10 15.4l-5.6 2.8 1.1-6.2L1 7.6l6.3-.9z"/></svg>
-          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.7 5.5L19 7.6l-4.5 4.4 1.1 6.2L10 15.4l-5.6 2.8 1.1-6.2L1 7.6l6.3-.9z"/></svg>
-          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.7 5.5L19 7.6l-4.5 4.4 1.1 6.2L10 15.4l-5.6 2.8 1.1-6.2L1 7.6l6.3-.9z"/></svg>
-        </div>
-        <blockquote>"Brought my car in after a rear-end accident. They handled the insurance claim, kept me updated, and the color match was perfect. Would not go anywhere else."</blockquote>
-        <div class="review-attr">Google review, Ashwaubenon customer</div>
-      </div>
-
-      <div class="review-card reveal reveal-delay-2">
-        <div class="review-stars" aria-label="5 stars">
-          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.7 5.5L19 7.6l-4.5 4.4 1.1 6.2L10 15.4l-5.6 2.8 1.1-6.2L1 7.6l6.3-.9z"/></svg>
-          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.7 5.5L19 7.6l-4.5 4.4 1.1 6.2L10 15.4l-5.6 2.8 1.1-6.2L1 7.6l6.3-.9z"/></svg>
-          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.7 5.5L19 7.6l-4.5 4.4 1.1 6.2L10 15.4l-5.6 2.8 1.1-6.2L1 7.6l6.3-.9z"/></svg>
-          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.7 5.5L19 7.6l-4.5 4.4 1.1 6.2L10 15.4l-5.6 2.8 1.1-6.2L1 7.6l6.3-.9z"/></svg>
-          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.7 5.5L19 7.6l-4.5 4.4 1.1 6.2L10 15.4l-5.6 2.8 1.1-6.2L1 7.6l6.3-.9z"/></svg>
-        </div>
-        <blockquote>"My dad brought his trucks here for years. Now I bring mine. The guys in the shop have been there forever. That says everything about how the place is run."</blockquote>
-        <div class="review-attr">Google review, Howard customer</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== CONTACT ===================== -->
-<section id="contact" class="contact">
+<!-- ============================================================
+     CONTACT
+============================================================ -->
+<section class="mid-bg" id="contact">
   <div class="container">
     <div class="contact-grid">
-      <div class="contact-info reveal">
-        <div class="section-eyebrow">Get in Touch</div>
-        <h2>Ready to bring your vehicle in? <em>Here is how to reach us.</em></h2>
-        <p>The shop line handles collision, paint, body work, and used-vehicle questions. The tow line is for dispatch when the vehicle cannot be driven. Both route to 1748 West Paulson Road in Green Bay.</p>
-
-        <div class="contact-details">
-          <div class="contact-row">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
-            </svg>
+      <div class="reveal">
+        <div class="eyebrow gold">Get in Touch</div>
+        <h2 class="contact-info">
+          <span style="font-family:var(--display);font-weight:400;font-size:clamp(36px,5vw,56px);line-height:0.96;color:var(--cream);text-transform:uppercase;display:block;margin-bottom:22px;">Bring your vehicle in.<br><span style="color:var(--warm);">Here is how to reach us.</span></span>
+        </h2>
+        <p style="font-size:16px;color:rgba(240,236,228,0.76);margin-bottom:28px;line-height:1.7;">The shop line handles collision, paint, body work, and used-vehicle questions. The tow line is for dispatch when the vehicle cannot be driven. Both route to 1748 West Paulson Road in Green Bay.</p>
+        <div class="info-rows">
+          <div class="info-row">
+            <div class="info-ic">
+              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
             <div>
-              <div class="contact-label">Address</div>
-              <div class="contact-value">1748 W Paulson Rd, Green Bay, WI 54313<br>Off Packerland Drive, near GRB Airport</div>
+              <div class="info-lbl">Address</div>
+              <div class="info-val">1748 W Paulson Rd, Green Bay, WI 54313<br>Off Packerland Drive, near GRB Airport</div>
             </div>
           </div>
-          <div class="contact-row">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.5 2 2 0 0 1 3.59 1.3h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.29 6.29l.82-.82a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-            </svg>
+          <div class="info-row">
+            <div class="info-ic">
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.5 2 2 0 0 1 3.59 1.3h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.29 6.29l.82-.82a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
             <div>
-              <div class="contact-label">Shop Line</div>
-              <div class="contact-value"><a href="tel:9204982133">(920) 498-2133</a><br>Collision, paint, body work, used vehicles</div>
+              <div class="info-lbl">Shop Line</div>
+              <div class="info-val"><a href="tel:9204982133">(920) 498-2133</a><br>Collision, paint, body work, used vehicles</div>
             </div>
           </div>
-          <div class="contact-row">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <rect x="1" y="3" width="15" height="13" rx="2"/><path d="m16 8 6 4v5h-6z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
-            </svg>
+          <div class="info-row">
+            <div class="info-ic">
+              <svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="m16 8 6 4v5h-6z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            </div>
             <div>
-              <div class="contact-label">Tow Dispatch</div>
-              <div class="contact-value"><a href="tel:9203960772">(920) 396-0772</a><br>Vehicle not drivable? Call this line first.</div>
+              <div class="info-lbl">Tow Dispatch</div>
+              <div class="info-val"><a href="tel:9203960772">(920) 396-0772</a><br>Vehicle not drivable? Call this line first.</div>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="info-ic">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2" stroke-linecap="round"/></svg>
+            </div>
+            <div>
+              <div class="info-lbl">Hours</div>
+              <div class="info-val">Monday to Thursday: 6:30 AM to 5:30 PM<br>Friday: 8:00 AM to 3:00 PM</div>
             </div>
           </div>
         </div>
-
-        <a href="tel:9204982133" class="btn" style="margin-top:8px;">Call (920) 498-2133</a>
+        <a href="tel:9204982133" class="btn-call-big"><small>Call the shop</small>(920) 498-2133</a>
       </div>
 
-      <div class="estimate-form reveal reveal-delay-1">
-        <h3>Request a Free Estimate</h3>
-        <p class="form-sub">Fill this out and the shop will get back to you. Or call directly at (920) 498-2133.</p>
-
+      <div class="estimate-form reveal d1">
+        <h3>Free Estimate</h3>
+        <p class="form-sub">Fill this out and the shop will get back to you, or call directly at (920) 498-2133.</p>
         <form action="#" method="POST" onsubmit="return false;">
           <div class="form-row">
-            <div>
-              <label for="fname">First Name</label>
-              <input type="text" id="fname" name="fname" placeholder="Jessica" autocomplete="given-name">
-            </div>
-            <div>
-              <label for="lname">Last Name</label>
-              <input type="text" id="lname" name="lname" placeholder="Senn" autocomplete="family-name">
-            </div>
+            <div><label for="fname">First Name</label><input type="text" id="fname" name="fname" placeholder="First name" autocomplete="given-name"></div>
+            <div><label for="lname">Last Name</label><input type="text" id="lname" name="lname" placeholder="Last name" autocomplete="family-name"></div>
+          </div>
+          <div class="form-row">
+            <div><label for="fphone">Phone</label><input type="tel" id="fphone" name="phone" placeholder="(920) 555-0100" autocomplete="tel"></div>
+            <div><label for="femail">Email</label><input type="email" id="femail" name="email" placeholder="you@email.com" autocomplete="email"></div>
+          </div>
+          <div class="form-row">
+            <div><label for="fvyear">Vehicle Year</label><input type="text" id="fvyear" name="vyear" placeholder="2019"></div>
+            <div><label for="fmake">Make and Model</label><input type="text" id="fmake" name="make" placeholder="Chevrolet Silverado"></div>
           </div>
           <div class="form-row">
             <div>
-              <label for="phone">Phone</label>
-              <input type="tel" id="phone" name="phone" placeholder="(920) 555-0100" autocomplete="tel">
-            </div>
-            <div>
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="you@email.com" autocomplete="email">
-            </div>
-          </div>
-          <div class="form-row">
-            <div>
-              <label for="year">Vehicle Year</label>
-              <input type="text" id="year" name="year" placeholder="2019">
-            </div>
-            <div>
-              <label for="make">Make and Model</label>
-              <input type="text" id="make" name="make" placeholder="Chevrolet Silverado">
-            </div>
-          </div>
-          <div class="form-row">
-            <div>
-              <label for="claim-type">Insurance or Out of Pocket?</label>
-              <select id="claim-type" name="claim-type">
+              <label for="fclaim">Insurance or Out of Pocket?</label>
+              <select id="fclaim" name="claim">
                 <option value="">Select one</option>
                 <option value="insurance">Going through insurance</option>
-                <option value="out-of-pocket">Paying out of pocket</option>
-                <option value="not-sure">Not sure yet</option>
+                <option value="oop">Paying out of pocket</option>
+                <option value="unsure">Not sure yet</option>
               </select>
             </div>
             <div>
-              <label for="service">Service Needed</label>
-              <select id="service" name="service">
+              <label for="fsvc">Service Needed</label>
+              <select id="fsvc" name="service">
                 <option value="">Select service</option>
                 <option value="collision">Collision repair</option>
                 <option value="paint">Paint and refinishing</option>
@@ -1211,11 +1119,11 @@
           </div>
           <div class="form-row full">
             <div>
-              <label for="notes">Describe the Damage</label>
-              <textarea id="notes" name="notes" placeholder="Brief description of what happened and what you can see on the vehicle..."></textarea>
+              <label for="fnotes">Describe the Damage</label>
+              <textarea id="fnotes" name="notes" placeholder="Brief description of what happened and what you can see on the vehicle..."></textarea>
             </div>
           </div>
-          <button type="submit" class="btn" style="width:100%; font-size:13px; padding:14px 0;">Send Estimate Request</button>
+          <button type="submit" class="form-submit">Send Estimate Request</button>
           <p class="form-note">No commitment required. The shop will call or email to confirm receipt and schedule an in-person look at the vehicle.</p>
         </form>
       </div>
@@ -1223,107 +1131,169 @@
   </div>
 </section>
 
-<!-- ===================== FINAL CTA ===================== -->
-<section class="final-cta">
+<!-- ============================================================
+     FINAL CTA
+============================================================ -->
+<section class="final">
   <div class="container">
-    <h2>A Green Bay family collision shop since 1983.</h2>
-    <p>Dave's Auto Body Inc has worked the same address on West Paulson Road for 42 years, family-owned the entire time, and daughter-led since 2018. Collision, paint, towing, and used-vehicle sales near Austin Straubel airport.</p>
-    <div class="final-actions">
-      <a href="#contact" class="btn btn-light">Request a Free Estimate</a>
-      <div class="phone-pair">
-        <span class="ph-label">Shop Line</span>
+    <h2 class="reveal">A Green Bay family collision shop since 1983.</h2>
+    <p class="reveal d1">Dave's Auto Body Inc has worked the same address on West Paulson Road for 42 years, family-owned the entire time, and daughter-led since 2018.</p>
+    <div class="final-actions reveal d2">
+      <a href="#contact" class="btn-white">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Free Estimate
+      </a>
+      <div class="ph-pair">
+        <span class="ph-lbl">Shop Line</span>
         <a href="tel:9204982133">(920) 498-2133</a>
       </div>
-      <div class="phone-pair">
-        <span class="ph-label">Tow Dispatch</span>
+      <div class="ph-pair">
+        <span class="ph-lbl">Tow Dispatch</span>
         <a href="tel:9203960772">(920) 396-0772</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===================== FOOTER ===================== -->
+<!-- ============================================================
+     FOOTER
+============================================================ -->
 <footer>
   <div class="container">
     <div class="foot-grid">
       <div>
-        <div class="foot-brand">
-          Dave's Auto Body Inc
-          <small>Green Bay, WI &middot; Since 1983</small>
-        </div>
-        <p class="foot-desc">Family-owned auto body and collision shop at 1748 West Paulson Road in Green Bay, Wisconsin. Founded in 1983 by Dave Wierer, run by his daughter Jessica Senn as owner and president since 2018. Collision repair, paint, towing, and used-vehicle sales off Packerland Drive, near the Austin Straubel airport.</p>
+        <div class="foot-brand">Dave's Auto Body Inc<small>Green Bay, WI &middot; Since 1983</small></div>
+        <p>Family-owned auto body and collision shop at 1748 West Paulson Road in Green Bay, Wisconsin. Founded in 1983 by Dave Wierer, run by his daughter Jessica Senn as owner and president since 2018. Collision repair, paint, towing, and used-vehicle sales off Packerland Drive, near Austin Straubel airport.</p>
       </div>
-      <div>
+      <div class="foot-col">
         <h5>Visit the Shop</h5>
-        <ul>
-          <li>1748 W Paulson Rd</li>
-          <li>Green Bay, WI 54313</li>
-          <li style="margin-top:6px;"><a href="tel:9204982133">(920) 498-2133</a></li>
-          <li>Shop and body work inquiries</li>
-        </ul>
+        <span>1748 W Paulson Rd</span>
+        <span>Green Bay, WI 54313</span>
+        <a href="tel:9204982133">(920) 498-2133</a>
+        <span>Mon to Thu: 6:30 AM to 5:30 PM</span>
+        <span>Friday: 8:00 AM to 3:00 PM</span>
       </div>
-      <div>
+      <div class="foot-col">
         <h5>Tow Dispatch</h5>
-        <ul>
-          <li><a href="tel:9203960772">(920) 396-0772</a></li>
-          <li>Vehicle not drivable?</li>
-          <li>Call this line first.</li>
-          <li style="margin-top:6px;">Off Packerland Drive</li>
-        </ul>
+        <a href="tel:9203960772">(920) 396-0772</a>
+        <span>Vehicle not drivable?</span>
+        <span>Call this line first.</span>
+        <span style="margin-top:6px;">Off Packerland Drive, near GRB</span>
       </div>
-      <div>
+      <div class="foot-col">
         <h5>Services</h5>
-        <ul>
-          <li><a href="#services">Collision Repair</a></li>
-          <li><a href="#services">Paint and Refinishing</a></li>
-          <li><a href="#services">Frame Straightening</a></li>
-          <li><a href="#services">Paintless Dent Repair</a></li>
-          <li><a href="#services">Towing</a></li>
-          <li><a href="#services">Used Vehicle Sales</a></li>
-        </ul>
+        <a href="#services">Collision Repair</a>
+        <a href="#services">Paint and Refinishing</a>
+        <a href="#services">Frame Straightening</a>
+        <a href="#services">Paintless Dent Repair</a>
+        <a href="#services">Towing</a>
+        <a href="#services">Used Vehicle Sales</a>
       </div>
     </div>
     <div class="foot-bottom">
-      <div class="foot-bottom-row">
-        <div>&copy; 2026 Dave's Auto Body Inc. Family-founded, daughter-led collision shop in Green Bay, WI. Est. 1983.</div>
-        <div class="signoff">Demo site prepared by <a href="https://andrei170.github.io/ag1/#services">AG Consulting</a></div>
-      </div>
+      <span>&copy; 2026 Dave's Auto Body Inc &middot; 1748 W Paulson Rd, Green Bay, WI 54313 &middot; Family-founded, daughter-led. Est. 1983.</span>
+      <span class="foot-demo">Demo site prepared by <a href="https://andrei170.github.io/ag1/#services">AG Consulting</a></span>
     </div>
   </div>
 </footer>
 
-<!-- ===================== SCRIPTS ===================== -->
+<!-- ============================================================
+     SCRIPTS
+============================================================ -->
 <script>
-  // Sticky header condense on scroll
-  (function () {
-    var header = document.getElementById('site-header');
-    if (!header) return;
-    function onScroll() {
-      if (window.scrollY > 60) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-    }
-    window.addEventListener('scroll', onScroll, { passive: true });
-  }());
+(function () {
+  'use strict';
 
-  // Scroll reveal (respects prefers-reduced-motion via CSS)
-  (function () {
-    var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (reducedMotion) return;
-    var els = document.querySelectorAll('.reveal');
-    if (!els.length) return;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---- Animated stat counters ---- */
+  function animateCount(el) {
+    var target = parseInt(el.getAttribute('data-count'), 10);
+    if (reduce || target <= 1) { el.textContent = target; return; }
+    var dur = 1200, t0 = null;
+    function step(ts) {
+      if (!t0) t0 = ts;
+      var p = Math.min((ts - t0) / dur, 1);
+      var e = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(target * e);
+      if (p < 1) requestAnimationFrame(step);
+      else el.textContent = target;
+    }
+    requestAnimationFrame(step);
+  }
+
+  /* ---- Scroll reveal + counter trigger ---- */
+  var revealEls = document.querySelectorAll('.reveal');
+  var counterEls = document.querySelectorAll('[data-count]');
+  if (reduce || !('IntersectionObserver' in window)) {
+    revealEls.forEach(function (el) { el.classList.add('in'); });
+    counterEls.forEach(animateCount);
+  } else {
     var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          io.unobserve(entry.target);
-        }
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
       });
-    }, { threshold: 0.12 });
-    els.forEach(function (el) { io.observe(el); });
-  }());
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    revealEls.forEach(function (el) { io.observe(el); });
+
+    var cio = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { animateCount(e.target); cio.unobserve(e.target); }
+      });
+    }, { threshold: 0.5 });
+    counterEls.forEach(function (el) { cio.observe(el); });
+  }
+
+  /* ---- Sticky header condense + top offset for strip ---- */
+  var header = document.getElementById('siteHeader');
+  var strip = document.getElementById('ctaStrip');
+  function onScroll() {
+    var stripH = strip ? strip.offsetHeight : 0;
+    if (window.scrollY > 60) {
+      header.classList.add('condensed');
+    } else {
+      header.classList.remove('condensed');
+    }
+    /* When user scrolls past 2x strip height, collapse strip offset */
+    if (window.scrollY > stripH * 2) {
+      header.classList.add('strip-gone');
+    } else {
+      header.classList.remove('strip-gone');
+    }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  /* ---- Mobile menu ---- */
+  var burger = document.getElementById('hamburger');
+  var menu = document.getElementById('mobileMenu');
+  var overlay = document.getElementById('mmOverlay');
+  function toggleMenu(open) {
+    burger.classList.toggle('open', open);
+    menu.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', String(open));
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+  burger.addEventListener('click', function () { toggleMenu(!menu.classList.contains('open')); });
+  overlay.addEventListener('click', function () { toggleMenu(false); });
+  menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { toggleMenu(false); }); });
+
+  /* ---- Smooth anchor scroll with header offset ---- */
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    link.addEventListener('click', function (ev) {
+      var id = this.getAttribute('href');
+      if (!id || id === '#' || id.length < 2) return;
+      var target = document.querySelector(id);
+      if (!target) return;
+      ev.preventDefault();
+      var offset = header.offsetHeight + 8;
+      var top = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top: top, behavior: reduce ? 'auto' : 'smooth' });
+    });
+  });
+
+}());
 </script>
 
 </body>
